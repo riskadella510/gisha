@@ -9,10 +9,7 @@
 .env.backup
 .env.production
 .phpunit.result.cache
-<<<<<<< HEAD
-=======
 composer.lock
->>>>>>> 92817915419b23886ef5e11d685ab8c489d9e046
 Homestead.json
 Homestead.yaml
 auth.json
