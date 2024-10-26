@@ -18,7 +18,10 @@
                 <select id="category" name="category"
                     class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200">
                     <option value="" disabled selected>Pilih Kategori</option>
+                    <!--<option value="ISPA">Penyakit ISPA</option>-->
                     <option value="HIV">Penyakit HIV</option>
+                    <!--<option value="DBD">Penyakit DBD</option>-->
+
                 </select>
                 <div class="relative w-full">
                     <input type="search" id="search-dropdown" name="search"
@@ -43,7 +46,8 @@
                         <img class="rounded-t-[24px] h-[175px] w-full object-cover object-center"
                             src="{{ asset('./storage/banner_news/' . $item->banner) }}">
                         <h2
-                            class="absolute bottom-2 right-2 text-white font-Anek text-[14px] bg-[#121440] rounded-full w-max px-[13px] py-1">
+                            class="absolute bottom-2 right-2 text-white font-Anek text-[14px] bg-[#121440] 
+                            rounded-full w-max px-[13px] py-1">
                             PENYAKIT {{ $item->category }}
                         </h2>
                     </div>
@@ -56,7 +60,11 @@
                         <p class="font-inter text font-light">
                             {{ Str::limit(strip_tags($item->deskripsi), 150) }}...</p>
                         <a href="/edukasi/{{ $item->id }}"
-                            class="text-black hover:text-white w-[180px] duration-200 md:w-[100px] border border-[2px] border-[#D95639] hover:border hover:border-[#F9F9F9]/15 hover:rounded-full= hover:border-[2px] font-Anek hover:bg-[#DC2265] hover:bg-gradient-to-bl font-bold rounded-full text-[10px] px-4 md:px-1 py-2.5 text-center me-2 mb-4 md:mb-2">
+                            class="text-black hover:text-white w-[180px] duration-200 md:w-[100px] border 
+                            border-[2px] border-[#D95639] hover:border hover:border-[#F9F9F9]/15 
+                            hover:rounded-full= hover:border-[2px] font-Anek hover:bg-[#DC2265] 
+                            hover:bg-gradient-to-bl font-bold rounded-full text-[10px] 
+                            px-4 md:px-1 py-2.5 text-center me-2 mb-4 md:mb-2">
                             SELENGKAPNYA
                         </a>
                     </div>

@@ -75,7 +75,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="8" class="text-center">Tidak ada data penduduk Pria Produktiv
+                                            <td colspan="8" class="text-center">Tidak ada data penduduk Pria Produktif
                                                 HIV</td>
                                         </tr>
                                     @endforelse
