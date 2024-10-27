@@ -977,7 +977,7 @@
             const parameterText = mapData[jenisPenyakit].options.find(option => option.value === jenisParameter)
                 .text ?? '';
             setMapDescriptionTo(
-                `Data ${jenisPenyakit} berdasarkan ${parameterText} Bulan ${monthMapping[parseInt(bulan)]} Tahun ${tahun} `
+                `Data ${jenisPenyakit} berdasarkan ${parameterText} Tahun ${tahun} `
             );
 
             $.ajax({

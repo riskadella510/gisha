@@ -122,7 +122,7 @@
             
             <!-- Embed Video YouTube -->
             <div class="relative aspect-w-16 aspect-h-9">
-                <iframe width="800" height="450" src="https://www.youtube.com/embed/5OqqHb1JxxU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="800" height="450" src="https://www.youtube.com/embed/Y1w8n0sVlmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             
             <!-- Keterangan tambahan -->

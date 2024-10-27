@@ -7,11 +7,7 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-<<<<<<< HEAD
                 <li class="breadcrumb-item active" aria-current="page">Penduduk Miskin</li>
-=======
-                <li class="breadcrumb-item active" aria-current="page">Penduduk Miskin HIV</li>
->>>>>>> 92817915419b23886ef5e11d685ab8c489d9e046
             </ol>
         </nav>
 
@@ -20,15 +16,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-<<<<<<< HEAD
                             <h4 class="card-title">Penduduk Miskin</h4>
                             <a href="{{ route('admin.penduduk-miskin-hiv.create') }}" class="btn btn-primary btn-sm">Tambah
                                 Penduduk Miskin</a>
-=======
-                            <h4 class="card-title">Penduduk Miskin HIV</h4>
-                            <a href="{{ route('admin.penduduk-miskin-hiv.create') }}" class="btn btn-primary btn-sm">Tambah
-                                Penduduk Miskin HIV</a>
->>>>>>> 92817915419b23886ef5e11d685ab8c489d9e046
                         </div>
 
                         @if (session('success'))
@@ -83,11 +73,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-<<<<<<< HEAD
                                             <td colspan="8" class="text-center">Tidak ada penduduk Miskin</td>
-=======
-                                            <td colspan="8" class="text-center">Tidak ada penduduk Miskin HIV</td>
->>>>>>> 92817915419b23886ef5e11d685ab8c489d9e046
                                         </tr>
                                     @endforelse
                                 </tbody>
