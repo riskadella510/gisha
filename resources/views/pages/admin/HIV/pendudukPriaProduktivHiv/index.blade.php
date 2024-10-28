@@ -1,21 +1,13 @@
 @extends('layouts.app')
 
-<<<<<<< HEAD
-@section('title', 'Data Pendnduk Pria Produktiv HIV')
-=======
 @section('title', 'Data Penduduk Pria Produktiv HIV')
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
 @section('content')
     <div class="page-content">
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
-<<<<<<< HEAD
-                <li class="breadcrumb-item active" aria-current="page">Data Pendnduk Pria Produktiv HIV</li>
-=======
                 <li class="breadcrumb-item active" aria-current="page">Data Penduduk Pria Produktif HIV</li>
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             </ol>
         </nav>
 
@@ -24,17 +16,10 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3">
-<<<<<<< HEAD
-                            <h4 class="card-title">Data Pendnduk Pria Produktiv HIV</h4>
-                            <a href="{{ route('admin.penduduk-pria-usi-produktiv-hiv.create') }}"
-                                class="btn btn-primary btn-sm">Tambah
-                                Data Pendnduk Pria Produktiv HIV</a>
-=======
                             <h4 class="card-title">Data Penduduk Pria Produktif HIV</h4>
                             <a href="{{ route('admin.penduduk-pria-usi-produktiv-hiv.create') }}"
                                 class="btn btn-primary btn-sm">Tambah
                                 Data Penduduk Pria Produktif HIV</a>
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                         </div>
 
                         @if (session('success'))
@@ -50,11 +35,7 @@
                                         <th>NO</th>
                                         <th>Gambar</th>
                                         <th>Kecamatan</th>
-<<<<<<< HEAD
-                                        <th>Pendnduk Pria Produktiv</th>
-=======
                                         <th>Penduduk Pria Produktif</th>
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                         <th>Kelas</th>
                                         <th>Tanggal</th>
                                         <th>Operator</th>
@@ -94,11 +75,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-<<<<<<< HEAD
-                                            <td colspan="8" class="text-center">Tidak ada data pendnduk Pria Produktiv
-=======
                                             <td colspan="8" class="text-center">Tidak ada data penduduk Pria Produktif
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                                 HIV</td>
                                         </tr>
                                     @endforelse

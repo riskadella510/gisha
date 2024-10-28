@@ -394,11 +394,7 @@
                                             </select>
                                         </div>
                                     </li>
-<<<<<<< HEAD
-                                    <li class="nav-item">
-=======
                                     <!--<li class="nav-item">
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                         <div class="mb-3">
                                             <select class="form-select form-select-sm" id="bulan" name="bulan">
                                                 <option selected disabled>Pilih Bulan</option>
@@ -409,11 +405,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-<<<<<<< HEAD
-                                    </li>
-=======
                                     </li>-->
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                     <li class="nav-item">
                                         <div class="mb-3">
                                             <select class="form-select form-select-sm" id="jenisPenyakit"
@@ -446,11 +438,7 @@
                         </div>
                     </li>
 
-<<<<<<< HEAD
-                    <li class="nav-item">
-=======
                     <!--<li class="nav-item">
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                         <a class="nav-link" data-bs-toggle="collapse" href="#transparansi" role="button"
                             aria-expanded="false" aria-controls="transparansi">
                             <i class="link-icon text-white" data-feather="sliders"></i>
@@ -501,15 +489,9 @@
                                             <div class="mb-3">
                                                 <select class="form-select form-select-sm" id="tahun-data1"
                                                     name="tahun-data1">
-<<<<<<< HEAD
-                                                    <option selected disabled>Pilih Tahun</option>
-                                                    <!-- Loop for years -->
-                                                    @for ($year = date('Y'); $year >= 2000; $year--)
-=======
                                                     <option selected disabled>Pilih Tahun</option>-->
                                                     <!-- Loop for years -->
                                                    <!-- @for ($year = date('Y'); $year >= 2000; $year--)
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                                         <option value="{{ $year }}">
                                                             {{ $year }}</option>
                                                     @endfor
@@ -533,17 +515,10 @@
                                             <div class="mb-3">
                                                 <select class="form-select form-select-sm" id="jenisPenyakit-data1"
                                                     name="jenisPenyakit-data1">
-<<<<<<< HEAD
-                                                    <option selected disabled>Pilih Jenis Penyakit</option>
-                                                    <!--<option value="DBD">DBD</option>
-                                                    <option value="ISPA">ISPA</option>-->
-                                                    <option value="HIV">HIV</option>
-=======
                                                     <option selected disabled>Pilih Jenis Penyakit</option>-->
                                                     <!--<option value="DBD">DBD</option>
                                                     <option value="ISPA">ISPA</option>-->
                                                     <!--<option value="HIV">HIV</option>
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                                 </select>
                                             </div>
                                         </li>
@@ -563,15 +538,9 @@
                                             <div class="mb-3">
                                                 <select class="form-select form-select-sm" id="tahun-data2"
                                                     name="tahun-data2">
-<<<<<<< HEAD
-                                                    <option selected disabled>Pilih Tahun</option>
-                                                    <!-- Loop for years -->
-                                                    @for ($year = date('Y'); $year >= 2000; $year--)
-=======
                                                     <option selected disabled>Pilih Tahun</option>-->
                                                     <!-- Loop for years -->
                                                    <!-- @for ($year = date('Y'); $year >= 2000; $year--)
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                                         <option value="{{ $year }}">
                                                             {{ $year }}</option>
                                                     @endfor
@@ -595,17 +564,11 @@
                                             <div class="mb-3">
                                                 <select class="form-select form-select-sm" id="jenisPenyakit-data2"
                                                     name="jenisPenyakit-data2">
-<<<<<<< HEAD
-                                                    <option selected disabled>Pilih Jenis Penyakit</option>
-                                                    <!--<option value="DBD">DBD</option>
-                                                    <option value="ISPA">ISPA</option>-->
-                                                    <option value="HIV">HIV</option>
-=======
                                                     <option selected disabled>Pilih Jenis Penyakit</option>-->
                                                     <!--<option value="DBD">DBD</option>
                                                     <option value="ISPA">ISPA</option>-->
                                                     <!--<option value="HIV">HIV</option>
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
+
                                                 </select>
                                             </div>
                                         </li>
@@ -630,11 +593,7 @@
 
                             </ul>
                         </div>
-<<<<<<< HEAD
-                    </li>
-=======
                     </li>-->
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#legenda" role="button"
@@ -1003,11 +962,7 @@
             var jenisParameter = $('#jenisParameter').val();
             var wilayah = $('#wilayah').val();
 
-<<<<<<< HEAD
-            if (!tahun || !bulan || !jenisPenyakit || !jenisParameter) {
-=======
             if (!tahun /*|| !bulan*/ || !jenisPenyakit || !jenisParameter) {
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                 toastr.warning('Mohon lengkapi semua filter.');
                 return;
             }
@@ -1023,11 +978,7 @@
             const parameterText = mapData[jenisPenyakit].options.find(option => option.value === jenisParameter)
                 .text ?? '';
             setMapDescriptionTo(
-<<<<<<< HEAD
-                `Data ${jenisPenyakit} berdasarkan ${parameterText} Bulan ${monthMapping[parseInt(bulan)]} Tahun ${tahun} `
-=======
                 `Data ${jenisPenyakit} berdasarkan ${parameterText} Tahun ${tahun} `
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             );
 
             $.ajax({
@@ -1131,21 +1082,13 @@
                             switch (jenisParameter) {
                                 case 'kasus_hiv':
                                     feature.set('kecamatan', item.kecamatan)
-<<<<<<< HEAD
-                                    feature.set('kasus', item.ha_kasus)
-=======
                                     /*feature.set('kasus', item.ha_kasus)*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                     feature.set('kelas', item.kelas_hiv)
                                     feature.set('tingkat_ka', item.kelas_hiv)
                                     break;
                                 case 'tuna_susila':
                                     feature.set('kecamatan', item.kecamatan)
-<<<<<<< HEAD
-                                    feature.set('tuna susila', item.tn_susila)
-=======
                                     /*feature.set('tuna susila', item.tn_susila)*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                     feature.set('kelas', item.kelas)
                                     feature.set('tingkat_ka', item.kelas)
                                     break;

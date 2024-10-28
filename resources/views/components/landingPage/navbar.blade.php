@@ -8,11 +8,7 @@
         </a>-->
 
         <a href="/" class="text-black flex items-center rtl:space-x-reverse md:pl-0 pl-[20px]">
-<<<<<<< HEAD
-            <img src="./assets/images/logogisha.png" class="h-10">
-=======
             <img src="{{ asset('assets/images/logogisha.png') }}" class="h-10">
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             <div id='appName' class="ml-4 text-2xl flex justify-center font-bold">
                 GISHA
             </div>   
@@ -40,11 +36,7 @@
                 </li>
                 <li>
                     <a href="/peta"
-<<<<<<< HEAD
-                        class="text-gray-200 font-Anek font-bold text-[17px] block py-2 hover:text-[#D95639] {{ Request::is('peta') ? 'text-[#D95639]' : '' }}">
-=======
                         class="font-Anek font-bold text-[17px] block py-2 hover:text-[#D95639] {{ Request::is('peta') ? 'text-[#D95639]' : '' }}">
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                         Peta
                     </a>
                 </li>

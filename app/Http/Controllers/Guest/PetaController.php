@@ -26,10 +26,7 @@ class PetaController extends Controller
 
     public function index()
     {
-<<<<<<< HEAD
-=======
         // Menggabungkan kelurahan dan kecamatan dari berbagai model
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
         $kelurahanDbd = DataPenyakitDbd::pluck('kelurahan')->merge(
             FaktorLingkunganDbd::pluck('kelurahan')
         )->merge(
@@ -78,14 +75,6 @@ class PetaController extends Controller
 
         $filteredData = [];
 
-<<<<<<< HEAD
-        if ($jenisPenyakit == 'DBD') {
-            switch ($jenisParameter) {
-                case 'kasus_dbd':
-                    $filteredData = DataPenyakitDbd::whereYear('tanggal', $tahun)
-                        ->whereMonth('tanggal', $bulan)
-                        ->get();
-=======
         // Filter untuk penyakit DBD
         if ($jenisPenyakit == 'DBD') {
             switch ($jenisParameter) {
@@ -95,12 +84,10 @@ class PetaController extends Controller
                         $query->whereMonth('tanggal', $bulan);
                     }
                     $filteredData = $query->get();
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                     break;
                 case 'kelembapan':
                 case 'curah_hujan':
                 case 'suhu':
-<<<<<<< HEAD
                     $filteredData = FaktorLingkunganDbd::whereYear('tanggal', $tahun)
                         ->whereMonth('tanggal', $bulan)
                         ->get();
@@ -180,7 +167,6 @@ class PetaController extends Controller
                     $filteredData = FaskesPdpHiv::whereYear('tanggal', $tahun)
                         ->whereMonth('tanggal', $bulan)
                         ->get();
-=======
                     $query = FaktorLingkunganDbd::whereYear('tanggal', $tahun);
                     if ($bulan) {
                         $query->whereMonth('tanggal', $bulan);
@@ -294,7 +280,6 @@ class PetaController extends Controller
                         $query->whereMonth('tanggal', $bulan);
                     }
                     $filteredData = $query->get();
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                     break;
             }
         }

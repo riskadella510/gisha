@@ -3,11 +3,7 @@
 
 @section('content')
     <div id="filter"
-<<<<<<< HEAD
-        class="fixed right-10 border border-slate-200 z-30 top-36 rounded w-fit h-fit p-4 bg-white drop-shadow-md hidden">
-=======
         class="fixed right-10 border border-slate-200 z-30 top-20 rounded w-fit h-fit p-4 bg-white drop-shadow-md hidden">
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
         <h1>Filter</h1>
         <div class="flex space-x-4">
             <div id="filter-tahun">

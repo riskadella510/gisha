@@ -49,11 +49,7 @@
         const filterTahunContainer = document.getElementById('filter-tahun');
         const filterBulanContainer = document.getElementById('filter-bulan');
         const kasusHivParam = document.getElementById('kasus-hiv')
-<<<<<<< HEAD
-        const hotspotHivParam = document.getElementById('hotspot-hiv')
-=======
         /*const hotspotHivParam = document.getElementById('hotspot-hiv')*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
         const pendudukMiskinParam = document.getElementById('penduduk-miskin')
         const priaProduktifParam = document.getElementById('pria-produktif')
         const tunaSusilaParam = document.getElementById('tuna-susila')
@@ -98,11 +94,7 @@
             yearData.add(currentYear);
 
             const arrayYears = Array.from(yearData).sort((a, b) => b - a);
-<<<<<<< HEAD
-            const arrayMonth = Array.from(monthData).sort((a, b) => b - a);
-=======
             /*const arrayMonth = Array.from(monthData).sort((a, b) => b - a);
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
             arrayMonth.map((item, index) => {
                 const inputElement = document.createElement('div');
@@ -112,11 +104,7 @@
                 `;
                 inputElement.innerHTML = input;
                 filterBulanContainer.append(inputElement);
-<<<<<<< HEAD
-            });
-=======
             });*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
             arrayYears.map(item => {
                 const inputElement = document.createElement('div');
@@ -202,11 +190,7 @@
         kasusHivParam.addEventListener('click', function() {
             title.innerHTML = 'Kasus HIV'
             kasusHivParam.classList.add('font-bold')
-<<<<<<< HEAD
-            hotspotHivParam.classList.remove('font-bold')
-=======
             /*hotspotHivParam.classList.remove('font-bold')*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             tunaSusilaParam.classList.remove('font-bold')
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.remove('font-bold')
@@ -215,11 +199,7 @@
             resetFilter()
             renderFilter(selectedData)
         })
-<<<<<<< HEAD
-        hotspotHivParam.addEventListener('click', function() {
-=======
         /*hotspotHivParam.addEventListener('click', function() {
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             title.innerHTML = 'Hotspot HIV'
             kasusHivParam.classList.remove('font-bold')
             hotspotHivParam.classList.add('font-bold')
@@ -231,28 +211,16 @@
             filterData(currentYear, currentMonth)
             resetFilter()
             renderFilter(selectedData)
-<<<<<<< HEAD
-        })
-        pendudukMiskinParam.addEventListener('click', function() {
-            title.innerHTML = 'Penduduk Miskin'
-            kasusHivParam.classList.remove('font-bold')
-            hotspotHivParam.classList.remove('font-bold')
-=======
         })*/
         pendudukMiskinParam.addEventListener('click', function() {
             title.innerHTML = 'Penduduk Miskin'
             kasusHivParam.classList.remove('font-bold')
             /*hotspotHivParam.classList.remove('font-bold')*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             tunaSusilaParam.classList.remove('font-bold')
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.remove('font-bold')
             pendudukMiskinParam.classList.add('font-bold')
-<<<<<<< HEAD
-            selectedData = hotspotHiv
-=======
             selectedData = pendudukMiskinHiv
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             filterData(currentYear, currentMonth)
             resetFilter()
             renderFilter(selectedData)
@@ -260,11 +228,7 @@
         tunaSusilaParam.addEventListener('click', function() {
             title.innerHTML = 'Tuna Susila'
             kasusHivParam.classList.remove('font-bold')
-<<<<<<< HEAD
-            hotspotHivParam.classList.remove('font-bold')
-=======
             /*hotspotHivParam.classList.remove('font-bold')*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             tunaSusilaParam.classList.add('font-bold')
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.remove('font-bold')
@@ -277,11 +241,7 @@
         wilayahRentanParam.addEventListener('click', function() {
             title.innerHTML = 'Wilayah Rentan HIV'
             kasusHivParam.classList.remove('font-bold')
-<<<<<<< HEAD
-            hotspotHivParam.classList.remove('font-bold')
-=======
             /*hotspotHivParam.classList.remove('font-bold')*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             tunaSusilaParam.classList.remove('font-bold')
             wilayahRentanParam.classList.add('font-bold')
             priaProduktifParam.classList.remove('font-bold')
@@ -292,15 +252,9 @@
             renderFilter(selectedData)
         })
         priaProduktifParam.addEventListener('click', function() {
-<<<<<<< HEAD
-            title.innerHTML = 'Wilayah Rentan HIV'
-            kasusHivParam.classList.remove('font-bold')
-            hotspotHivParam.classList.remove('font-bold')
-=======
             title.innerHTML = 'Pria Usia Produktif'
             kasusHivParam.classList.remove('font-bold')
             /*hotspotHivParam.classList.remove('font-bold')*/
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             tunaSusilaParam.classList.remove('font-bold')
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.add('font-bold')
@@ -355,11 +309,7 @@
                         }
                     },
                     title: {
-<<<<<<< HEAD
-                        display: true,
-=======
                         display: false,
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                         text: `Data Tahun ${year}`,
                         fontSize: 18
                     },
@@ -369,12 +319,9 @@
                         duration: 1000,
                         easing: 'easeOutBounce'
                     },
-<<<<<<< HEAD
-=======
                     tooltips: {
                 enabled: false // Nonaktifkan tooltip
         },
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                 }
             });
         }

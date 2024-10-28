@@ -2,15 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-<<<<<<< HEAD
-use App\Http\Controllers\Controller;
-use App\Models\WilayahRentanHiv;
-use Illuminate\Http\Request;
-=======
 use Illuminate\Http\Request;
 use App\Models\WilayahRentanHiv;
 use App\Http\Controllers\Controller;
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 use Illuminate\Support\Facades\Storage;
 
 class WilayahRentanHivController extends Controller
@@ -91,11 +85,7 @@ class WilayahRentanHivController extends Controller
             'kelas' => $request->input('kelas'),
         ]);
 
-<<<<<<< HEAD
-        return redirect()->route('admin.wilayah-rentan-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
-=======
         return redirect()->route('admin.wilayah-rentan-hiv.index')->with('success', 'Data Wilayah Rentan HIV berhasil diperbarui.');
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -110,10 +100,6 @@ class WilayahRentanHivController extends Controller
         }
         // Hapus data wilayahRentanHiv
         $wilayahRentanHiv->delete();
-<<<<<<< HEAD
-        return redirect()->route('admin.wilayah-rentan-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
-=======
         return redirect()->route('admin.wilayah-rentan-hiv.index')->with('success', 'Data Wilayah Rentan HIV berhasil dihapus!');
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }

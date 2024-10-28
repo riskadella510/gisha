@@ -10,11 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <!-- <link rel="stylesheet" href="{{ \App\Helpers\Helper::viteAsset('resources/css/app.css') }}">
     <script type="module" src="{{ \App\Helpers\Helper::viteAsset('resources/js/app.js') }}"></script> -->
-<<<<<<< HEAD
-    <link rel="icon" href="{{ asset('./assets/images/logo.png') }}" type="image.png">
-=======
     <link rel="icon" href="{{ asset('./assets/images/logogisha.png') }}" type="image.png">
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 </head>
 
 <body class="min-h-screen w-full bg-cover bg-center bg-no-repeat object-cover"

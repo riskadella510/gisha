@@ -31,12 +31,7 @@
 
     <!-- CKEditor 5 -->
     <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.1.0/ckeditor5.css" />
-
-<<<<<<< HEAD
-    <link rel="shortcut icon" href="{{ asset('assets/images/logo.png') }}" />
-=======
     <link rel="shortcut icon" href="{{ asset('assets/images/logogisha.png') }}" />
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
     <!-- Leaflet Maps CSS -->

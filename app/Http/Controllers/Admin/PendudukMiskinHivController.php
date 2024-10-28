@@ -2,15 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-<<<<<<< HEAD
-use App\Http\Controllers\Controller;
-use App\Models\PendudukMiskinHiv;
-use Illuminate\Http\Request;
-=======
 use Illuminate\Http\Request;
 use App\Models\PendudukMiskinHiv;
 use App\Http\Controllers\Controller;
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 use Illuminate\Support\Facades\Storage;
 
 class PendudukMiskinHivController extends Controller
@@ -53,11 +47,7 @@ class PendudukMiskinHivController extends Controller
             PendudukMiskinHiv::create([
                 'geometry' => json_encode($feature['geometry']),
                 'kecamatan' => $feature['properties']['KECAMATAN'],
-<<<<<<< HEAD
-                'pdd_miskin' => $feature['properties']['Pdd_Miskin'],
-=======
                 'pdd_miskin' => $feature['properties']['pdd_miskin'],
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                 'kelas' => $feature['properties']['Kelas'],
                 'operator' => $request->operator,
                 'tanggal' => $request->tanggal,
@@ -101,12 +91,7 @@ class PendudukMiskinHivController extends Controller
             'pdd_miskin' => $request->input('pdd_miskin'),
             'kelas' => $request->input('kelas'),
         ]);
-
-<<<<<<< HEAD
-        return redirect()->route('admin.penduduk-miskin-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
-=======
         return redirect()->route('admin.penduduk-miskin-hiv.index')->with('success', 'Data Penduduk Miskin berhasil diperbarui.');
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -121,10 +106,6 @@ class PendudukMiskinHivController extends Controller
         }
         // Hapus data pendudukMiskinHiv
         $pendudukMiskinHiv->delete();
-<<<<<<< HEAD
-        return redirect()->route('admin.penduduk-miskin-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
-=======
         return redirect()->route('admin.penduduk-miskin-hiv.index')->with('success', 'Data Penduduk Miskin berhasil dihapus!');
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }

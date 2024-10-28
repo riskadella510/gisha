@@ -2,15 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-<<<<<<< HEAD
-use App\Http\Controllers\Controller;
-use App\Models\KasusHiv;
-use Illuminate\Http\Request;
-=======
 use App\Models\KasusHiv;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 use Illuminate\Support\Facades\Storage;
 
 class KasusHivController extends Controller
@@ -98,11 +92,7 @@ class KasusHivController extends Controller
             'kelas_hiv' => $request->input('kelas_hiv'),
         ]);
 
-<<<<<<< HEAD
-        return redirect()->route('admin.kasus-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
-=======
         return redirect()->route('admin.kasus-hiv.index')->with('success', 'Data Kasus HIV berhasil diperbarui.');
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -117,10 +107,6 @@ class KasusHivController extends Controller
         }
         // Hapus data kasusHiv
         $kasusHiv->delete();
-<<<<<<< HEAD
-        return redirect()->route('admin.kasus-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
-=======
         return redirect()->route('admin.kasus-hiv.index')->with('success', 'Data Kasus HIV berhasil dihapus!');
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }
