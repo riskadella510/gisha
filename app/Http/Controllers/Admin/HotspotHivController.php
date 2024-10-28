@@ -12,7 +12,7 @@ class HotspotHivController extends Controller
     public function index()
     {
         $hotspotHiv = HotspotHiv::paginate(10); // Ambil data kelurahan dengan pagination
-        return view('pages.admin.HIV.hotspotHiv.index', compact('hotspotHiv'));
+        return view('pages.admin.HIV.hotspotHIV.index', compact('hotspotHiv'));
     }
 
     /**
@@ -20,7 +20,7 @@ class HotspotHivController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.HIV.hotspotHiv.create');
+        return view('pages.admin.HIV.hotspotHIV.create');
     }
 
     /**
