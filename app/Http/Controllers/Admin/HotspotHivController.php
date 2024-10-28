@@ -20,7 +20,7 @@ class HotspotHivController extends Controller
      */
     public function create()
     {
-        return view('pages.admin.HIV.hotspotHiv.create');
+        return view('pages.admin.HIV.hotspotHIV.create');
     }
 
     /**
@@ -71,7 +71,7 @@ class HotspotHivController extends Controller
      */
     public function edit(HotspotHiv $hostpotHiv)
     {
-        return view('pages.admin.HIV.hotspotHiv.edit', compact('hostpotHiv'));
+        return view('pages.admin.HIV.hotspotHIV.edit', compact('hostpotHiv'));
     }
 
     /**
