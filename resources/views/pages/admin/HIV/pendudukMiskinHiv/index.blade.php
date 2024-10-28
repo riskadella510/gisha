@@ -7,7 +7,11 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
+<<<<<<< HEAD
                 <li class="breadcrumb-item active" aria-current="page">Penduduk Miskin HIV</li>
+=======
+                <li class="breadcrumb-item active" aria-current="page">Penduduk Miskin</li>
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             </ol>
         </nav>
 
@@ -16,9 +20,15 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center mb-3">
+<<<<<<< HEAD
                             <h4 class="card-title">Penduduk Miskin HIV</h4>
                             <a href="{{ route('admin.penduduk-miskin-hiv.create') }}" class="btn btn-primary btn-sm">Tambah
                                 Penduduk Miskin HIV</a>
+=======
+                            <h4 class="card-title">Penduduk Miskin</h4>
+                            <a href="{{ route('admin.penduduk-miskin-hiv.create') }}" class="btn btn-primary btn-sm">Tambah
+                                Penduduk Miskin</a>
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                         </div>
 
                         @if (session('success'))
@@ -56,7 +66,11 @@
                                                 @endif
                                             </td>
                                             <td>{{ $item->kecamatan }}</td>
+<<<<<<< HEAD
                                             <td>{{ $item->Pdd_miskin }}</td>
+=======
+                                            <td>{{ $item->pdd_miskin }}</td>
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                             <td>{{ $item->kelas }}</td>
                                             <td>{{ $item->tanggal }}</td>
                                             <td>{{ $item->operator }}</td>
@@ -73,7 +87,11 @@
                                         </tr>
                                     @empty
                                         <tr>
+<<<<<<< HEAD
                                             <td colspan="8" class="text-center">Tidak ada penduduk Miskin HIV</td>
+=======
+                                            <td colspan="8" class="text-center">Tidak ada penduduk Miskin</td>
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                         </tr>
                                     @endforelse
                                 </tbody>

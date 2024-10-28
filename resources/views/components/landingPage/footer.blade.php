@@ -13,6 +13,7 @@
             <img src={{ asset('./assets/images/others/logobantul.png') }} class="mt-5 h-[96.31px] w-[100px]" alt="kota">
             <div class="mt-2 text-center">
                 <h1>Dinas Kesehatan Kabupaten Bantul</h1>
+<<<<<<< HEAD
                 <!--<div class="flex justify-center space-x-2 items-center mt-4">
                     <a href="#" class="p-2 rounded border border-white"><svg width="18" height="19"
                             viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,6 +37,8 @@
                         </svg>
                     </a>
                 </div>-->
+=======
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             </div>
         </div>
         <div class=" flex flex-col text-center lg:text-left">

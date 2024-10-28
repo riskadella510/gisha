@@ -46,7 +46,12 @@
                         <img class="rounded-t-[24px] h-[175px] w-full object-cover object-center"
                             src="{{ asset('./storage/banner_news/' . $item->banner) }}">
                         <h2
+<<<<<<< HEAD
                             class="absolute bottom-2 right-2 text-white font-Anek text-[14px] bg-[#121440] rounded-full w-max px-[13px] py-1">
+=======
+                            class="absolute bottom-2 right-2 text-white font-Anek text-[14px] bg-[#121440] 
+                            rounded-full w-max px-[13px] py-1">
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                             PENYAKIT {{ $item->category }}
                         </h2>
                     </div>
@@ -59,7 +64,15 @@
                         <p class="font-inter text font-light">
                             {{ Str::limit(strip_tags($item->deskripsi), 150) }}...</p>
                         <a href="/edukasi/{{ $item->id }}"
+<<<<<<< HEAD
                             class="text-black hover:text-white w-[180px] duration-200 md:w-[100px] border border-[2px] border-[#D95639] hover:border hover:border-[#F9F9F9]/15 hover:rounded-full= hover:border-[2px] font-Anek hover:bg-[#DC2265] hover:bg-gradient-to-bl font-bold rounded-full text-[10px] px-4 md:px-1 py-2.5 text-center me-2 mb-4 md:mb-2">
+=======
+                            class="text-black hover:text-white w-[180px] duration-200 md:w-[100px] border 
+                            border-[2px] border-[#D95639] hover:border hover:border-[#F9F9F9]/15 
+                            hover:rounded-full= hover:border-[2px] font-Anek hover:bg-[#DC2265] 
+                            hover:bg-gradient-to-bl font-bold rounded-full text-[10px] 
+                            px-4 md:px-1 py-2.5 text-center me-2 mb-4 md:mb-2">
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                             SELENGKAPNYA
                         </a>
                     </div>

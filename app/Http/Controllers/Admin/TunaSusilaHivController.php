@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
 use App\Http\Controllers\Controller;
 use App\Models\TunaSusilaHiv;
 use Illuminate\Http\Request;
+=======
+use Illuminate\Http\Request;
+use App\Models\TunaSusilaHiv;
+use App\Http\Controllers\Controller;
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 use Illuminate\Support\Facades\Storage;
 
 class TunaSusilaHivController extends Controller
@@ -92,7 +98,11 @@ class TunaSusilaHivController extends Controller
             'kelas' => $request->input('kelas'),
         ]);
 
+<<<<<<< HEAD
         return redirect()->route('admin.tuna-susila-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
+=======
+        return redirect()->route('admin.tuna-susila-hiv.index')->with('success', 'Data Tuna Susila berhasil diperbarui.');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -107,6 +117,10 @@ class TunaSusilaHivController extends Controller
         }
         // Hapus data tunaSusilaHiv
         $tunaSusilaHiv->delete();
+<<<<<<< HEAD
         return redirect()->route('admin.tuna-susila-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
+=======
+        return redirect()->route('admin.tuna-susila-hiv.index')->with('success', 'Data Tuna Susila berhasil dihapus!');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }

@@ -207,7 +207,11 @@
                                         <li class="nav-item">
                                             <a href="{{ route('admin.wilayah-rentan-hiv.index') }}"
                                                 class="nav-link {{ request()->routeIs('admin.wilayah-rentan-hiv.*') ? 'active' : '' }}">Wilayah
+<<<<<<< HEAD
                                                 Rentan</a>
+=======
+                                                Rentan HIV</a>
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.faskes-pdp-hiv.index') }}"

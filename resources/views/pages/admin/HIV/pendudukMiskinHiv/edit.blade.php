@@ -9,9 +9,15 @@
         <nav class="page-breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('admin.dashboard.index') }}">Dashboard</a></li>
+<<<<<<< HEAD
                 <li class="breadcrumb-item"><a href="{{ route('admin.penduduk-miskin-hiv.index') }}">Penduduk Miskin HIV</a>
                 </li>
                 <li class="breadcrumb-item active" aria-current="page">Edit Penduduk Miskin HIV</li>
+=======
+                <li class="breadcrumb-item"><a href="{{ route('admin.penduduk-miskin-hiv.index') }}">Penduduk Miskin</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Edit Penduduk Miskin</li>
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             </ol>
         </nav>
 

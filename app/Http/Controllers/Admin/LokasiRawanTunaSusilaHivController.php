@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
 use App\Http\Controllers\Controller;
 use App\Models\LokasiRawanTunaSusilaHiv;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+=======
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use App\Models\LokasiRawanTunaSusilaHiv;
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
 class LokasiRawanTunaSusilaHivController extends Controller
 {
@@ -84,7 +91,11 @@ class LokasiRawanTunaSusilaHivController extends Controller
             'lok_pros' => $request->input('lok_pros'),
         ]);
 
+<<<<<<< HEAD
         return redirect()->route('admin.lokasi-rawan-tuna-susila-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
+=======
+        return redirect()->route('admin.lokasi-rawan-tuna-susila-hiv.index')->with('success', 'Data Lokasi Rawan Tuna Susila berhasil diperbarui.');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -99,6 +110,10 @@ class LokasiRawanTunaSusilaHivController extends Controller
         }
         // Hapus data lokasiRawanTunaSusilaHiv
         $lokasiRawanTunaSusilaHiv->delete();
+<<<<<<< HEAD
         return redirect()->route('admin.lokasi-rawan-tuna-susila-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
+=======
+        return redirect()->route('admin.lokasi-rawan-tuna-susila-hiv.index')->with('success', 'Data Lokasi Rawan Tuna Susila berhasil dihapus!');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }

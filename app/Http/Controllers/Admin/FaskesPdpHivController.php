@@ -2,9 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
 use App\Http\Controllers\Controller;
 use App\Models\FaskesPdpHiv;
 use Illuminate\Http\Request;
+=======
+use App\Models\FaskesPdpHiv;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 use Illuminate\Support\Facades\Storage;
 
 class FaskesPdpHivController extends Controller
@@ -90,7 +96,11 @@ class FaskesPdpHivController extends Controller
             'faskes_pdp' => $request->input('faskes_pdp'),
         ]);
 
+<<<<<<< HEAD
         return redirect()->route('admin.faskes-pdp-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
+=======
+        return redirect()->route('admin.faskes-pdp-hiv.index')->with('success', 'Data Faskes PDP HIV berhasil diperbarui.');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -105,6 +115,10 @@ class FaskesPdpHivController extends Controller
         }
         // Hapus data faskesPdpHiv
         $faskesPdpHiv->delete();
+<<<<<<< HEAD
         return redirect()->route('admin.faskes-pdp-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
+=======
+        return redirect()->route('admin.faskes-pdp-hiv.index')->with('success', 'Data Faskes PDP HIV berhasil dihapus!');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }

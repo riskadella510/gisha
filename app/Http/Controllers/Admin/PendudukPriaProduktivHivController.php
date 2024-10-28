@@ -2,10 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+<<<<<<< HEAD
 use App\Http\Controllers\Controller;
 use App\Models\PendudukPriaProduktivHiv;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+=======
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
+use App\Models\PendudukPriaProduktivHiv;
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
 class PendudukPriaProduktivHivController extends Controller
 {
@@ -92,7 +99,11 @@ class PendudukPriaProduktivHivController extends Controller
             'kelas' => $request->input('kelas'),
         ]);
 
+<<<<<<< HEAD
         return redirect()->route('admin.penduduk-pria-usi-produktiv-hiv.index')->with('success', 'Data Penyakit HIV berhasil diperbarui.');
+=======
+        return redirect()->route('admin.penduduk-pria-usi-produktiv-hiv.index')->with('success', 'Data Pria Usia Produktif berhasil diperbarui.');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 
     /**
@@ -107,6 +118,10 @@ class PendudukPriaProduktivHivController extends Controller
         }
         // Hapus data pendudukPriaProduktivHiv
         $pendudukPriaProduktivHiv->delete();
+<<<<<<< HEAD
         return redirect()->route('admin.penduduk-pria-usi-produktiv-hiv.index')->with('success', 'Data Penyakit HIV berhasil dihapus!');
+=======
+        return redirect()->route('admin.penduduk-pria-usi-produktiv-hiv.index')->with('success', 'Data Pria Usia Produktif berhasil dihapus!');
+>>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
     }
 }
