@@ -47,7 +47,7 @@ class PendudukMiskinHivController extends Controller
             PendudukMiskinHiv::create([
                 'geometry' => json_encode($feature['geometry']),
                 'kecamatan' => $feature['properties']['KECAMATAN'],
-                'pdd_miskin' => $feature['properties']['pdd_miskin'],
+                'pdd_miskin' => $feature['properties']['Pdd_Miskin'],
                 'kelas' => $feature['properties']['Kelas'],
                 'operator' => $request->operator,
                 'tanggal' => $request->tanggal,
