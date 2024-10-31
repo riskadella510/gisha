@@ -3,10 +3,10 @@
         <!--<div class="flex items-center md:justify-between flex-col md:flex-row">-->
         <div class="flex items-center justify-center space-x-[600px]">
             <div class="flex flex-col items-center">
-                <div class="p-2 text-[#D95639] w-fit rounded bg-[#fcd4ca]">
+                <div class="p-2 font-bold text-[#D95639] w-fit rounded bg-[#fcd4ca]">
                     Metadata GISHA
                 </div>
-                <h1 class="text-3xl font-bold text-center mb-4">
+                <h1 class="text-1xl font-bold text-center mb-4">
                     Menyajikan Data HIV/AIDS <br /> dan Parameternya dalam Visualisasi Peta
                 </h1>
             </div>
@@ -114,11 +114,11 @@
 <div>
     <div class="p-4 bg-[#F0F0F0]">
         <!--<hr class="w-1/2 border-t-4 border-black mx-auto mt-14">-->
-        <div class="flex flex-col items-center max-w-xl mx-auto p-4">
-            <div class="p-2 text-[#D95639] w-fit rounded bg-[#fcd4ca]">
+        <div class="flex flex-col items-center max-w-xl mx-auto p-8">
+            <div class="p-2 font-bold text-[#D95639] w-fit rounded bg-[#fcd4ca]">
                 Panduan GISHA
             </div>
-            <h1 class="text-3xl font-bold text-center mb-4">Berikut Video Panduan Penggunaan GISHA</h1>
+            <h1 class="text-1xl font-bold text-center mb-4">Berikut Video Panduan Penggunaan GISHA</h1>
             
             <!-- Embed Video YouTube -->
             <div class="relative aspect-w-16 aspect-h-9">

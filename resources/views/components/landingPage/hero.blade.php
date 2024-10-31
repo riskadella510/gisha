@@ -2,7 +2,7 @@
     class="h-fit pb-11 flex flex-col items-center relative justify-center bg-cover bg-center text-white">-->
 <div style="background-image: url('./assets/background/heroo.jpg')" 
     class="h-screen flex items-center justify-center bg-cover bg-center">
-    <div class="absolute top-[100px] left-0 right-0 flex flex-col items-center mb-10">
+    <div class="absolute top-[100px] left-0 right-0 flex flex-col items-center mt-20">
         <div class="text-[15px] items-center p-2 rounded bg-white text-center w-fit bg-opacity-30 z-10" style="color: #f04545;">
             <svg class="inline" width="19" height="20" viewBox="0 0 19 20" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@
                 Tangan Anda
             </p>
         </div>-->
-        <div class=" text-center px-4 md:px-40 z-10 mb-10">
+        <div class=" text-center px-2 md:px-40 z-10 mb-10">
             <h1 class="text-4xl md:text-[55px] leading-[1.2] text-center font-bold" style="color: #D83F31; ">Selamat Datang di GISHA
             </h1>
             <p class="px-5 md:px-[90px] text-xl md:text-[20px] mb-10" style="color: #D83F31;">(Geographic Information Sistem for HIV/AIDS)
@@ -94,7 +94,7 @@
 </div>
 <div class="p-4 bg-[#F0F0F0] py-24">
     <div class="flex flex-col items-center">
-        <div class="p-2 text-[#D95639] w-fit rounded bg-[#fcd4ca]">
+        <div class="p-2 font-bold text-[#D95639] w-fit rounded bg-[#fcd4ca]">
             Fitur GISHA
         </div>
         <!--<h1 class="text-[20px] text-justify leading-tight">
@@ -104,7 +104,7 @@
             <br /> GISHA hadir memberikan Rangkuman Informasi HIV/AIDS Terkhusus di Kabupaten Bantul
             <br /> Memahami kondisi HIV/AIDS terkini melalui fitur utama Peta, Grafik, dan Edukasi
         </p>-->
-        <h1 class="text-3xl font-bold text-center mb-4">
+        <h1 class="text-1xl font-bold text-center mb-4">
             Hadir Memberi Informasi HIV/AIDS <br /> Melalui Peta, Grafik, dan Edukasi
         </h1>
     </div>
