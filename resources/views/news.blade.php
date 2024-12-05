@@ -15,17 +15,17 @@
         <form class="max-w-lg md:w-[1500px] mx-auto mb-10" method="GET" action="{{ route('home.edukasi') }}"
             data-aos="fade-up">
             <div class="flex">
-                <select id="category" name="category"
+                <!--<select id="category" name="category"
                     class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-gray-900 bg-gray-100 border border-gray-300 rounded-s-lg hover:bg-gray-200">
-                    <option value="" disabled selected>Pilih Kategori</option>
+                    <option value="" disabled selected>Pencarian</option>-->
                     <!--<option value="ISPA">Penyakit ISPA</option>-->
-                    <option value="HIV">Penyakit HIV</option>
-                    <!--<option value="DBD">Penyakit DBD</option>-->
+                    <!--<option value="HIV">Penyakit HIV</option>-->
+                    <!--<option value="DBD">Penyakit DBD</option>
 
-                </select>
+                </select>-->
                 <div class="relative w-full">
                     <input type="search" id="search-dropdown" name="search"
-                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 rounded-e-lg border-s-gray-50"
+                        class="block p-2.5 w-full z-20 text-sm text-gray-900 bg-gray-50 border-gray-300 border rounded-l-lg"
                         placeholder="Search..." />
                     <button type="submit"
                         class="absolute top-0 end-0 p-2.5 text-sm font-medium h-full text-white bg-gradient-to-br bg-[#D95639] hover:bg-[#DC2265] hover:bg-gradient-to-bl w-[40px] rounded-r-lg">

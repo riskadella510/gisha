@@ -65,7 +65,7 @@
     <div>
 
         <a href={{ Request::is('grafik') ? 'grafik/hiv' : 'hiv' }}
-            class="{{ Request::is('grafik/hiv') ? 'font-bold text-left flex justify-between mt-4' : 'mt-4 flex justify-between' }}">
+            class="{{ Request::is('grafik/hiv') ? 'font-bold text-left flex justify-between mt-2' : 'mt-2 flex justify-between' }}">
             <div>
                 <svg class="inline" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -73,7 +73,7 @@
                         d="M9.54872 23.875L7.42372 20.125H3.29872L0.844971 15.75L2.96997 12L0.844971 8.25L3.29622 3.875H7.42122L9.54622 0.125H14.45L16.575 3.875H20.7L23.155 8.25L21.03 12L23.155 15.75L20.7037 20.125H16.5787L14.4537 23.875H9.54872ZM16.5775 11.375H19.985L21.7225 8.25L19.9875 5.125H16.5787L14.81 8.25L16.5775 11.375ZM10.3275 15.125H13.6725L15.44 12L13.6725 8.875H10.3275L8.55997 12L10.3275 15.125ZM10.3275 7.625H13.6725L15.4712 4.46875L13.705 1.375H10.295L8.52997 4.46875L10.3275 7.625ZM4.04497 11.375H7.42247L9.19122 8.25L7.42247 5.125H4.04622L2.27872 8.25L4.04497 11.375ZM4.04497 18.875H7.42247L9.19122 15.75L7.42372 12.625H4.01622L2.27872 15.75L4.04497 18.875ZM10.295 22.625H13.705L15.4712 19.5312L13.6737 16.375H10.3275L8.52872 19.5312L10.295 22.625ZM16.5775 18.875H19.9537L21.7212 15.75L19.955 12.625H16.5775L14.81 15.75L16.5775 18.875Z"
                         fill="white" />
                 </svg>
-                <h1 class="px-1 inline">HIV</h1>
+                <h1 class="px-1 inline"> Daftar Grafik</h1>
             </div>
             <svg class="mt-2" width="12" height="9" viewBox="0 0 16 9" fill="none"
                 xmlns="http://www.w3.org/2000/svg">

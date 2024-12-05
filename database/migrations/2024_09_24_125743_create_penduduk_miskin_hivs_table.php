@@ -1,14 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
-=======
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
 
 return new class extends Migration {
     /**
@@ -20,11 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->json('geometry'); // Data geometry disimpan dalam format JSON
             $table->string('kecamatan', 255); // Nama kecamatan
-<<<<<<< HEAD
-            $table->integer('pdd_miskin'); // Data penduduk miskin dalam float
-=======
             $table->bigInteger('pdd_miskin'); // Data penduduk miskin dalam integer
->>>>>>> 7dece0e7cff45e63df7afa7096f2267d873674fa
             $table->string('kelas', 255); // Kelas dalam varchar
             $table->string('operator');
             $table->date('tanggal');

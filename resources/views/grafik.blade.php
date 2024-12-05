@@ -21,17 +21,26 @@
             <div class="flex space-x-2">
                 <div style="width: 100vh; height: calc(100vh - 10rem)"
                     class="p-4 bg-white overflow-auto drop-shadow-lg rounded border border-slate-200">
-                    <canvas id="chart" class="pb-7  overflow-auto"></canvas>
+                    <canvas id="chart" class="pb-7 overflow-auto"></canvas>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script>
-        const tableName = {!! json_encode($tableName) !!}.toString().split('\\')[2]
-        const latestData = {!! json_encode($allData) !!}
-        const currentYear = new Date().getFullYear().toString()
-
+        const tableName = {!! json_encode($tableName) !!}.toString().split('\\')[2];
+        const allData = {!! json_encode($allData) !!};
+    
+        // Hitung tahun sebelumnya
+        const lastYear = (new Date().getFullYear() - 1).toString();
+    
+        // Filter data untuk tahun sebelumnya
+        const dataLastYear = allData.filter(item => item.tanggal.split('-')[0] === lastYear);
+    
+        // Debug data
+        console.log('Last Year:', lastYear);
+        console.log('Data Last Year:', dataLastYear);
+    
         function getRandomColor() {
             const letters = '0123456789ABCDEF';
             let color = '#';
@@ -40,33 +49,42 @@
             }
             return color;
         }
-
-        const yValues = latestData.filter(item => item.tanggal.split('-')[0] == currentYear).map(item => tableName ==
-            'KasusHiv' ? item.ha_kasus : tableName == 'HotspotHiv' ? item
-            .ha_kasus : tableName == 'PendudukMiskinHiv' ? item.pdd_miskin : tableName == 'TunaSusilaHiv' ? item
-            .tn_susila : tableName == 'PendudukPriaProduktivHiv' ?
-            item.pdd_lk_pro : tableName == 'WilayahRentanHiv' ?
-            item.nilai_wr : tableName == 'CurahHujanIspa' ? item.curah_hujan :
-            tableName == 'DataPenyakitIspa' ? item.jumlah_ispa_penderita : tableName == 'KelembapanIspa' ? item
-            .kelembapan :
-            tableName == 'KepadatanPendudukIspa' ? item.kpdt_bps : tableName == 'SuhuIspa' ? item.suhu :
-            tableName == 'DataPenyakitDbd' ? item.kasus : tableName == 'FaktorLingkunganDbd' ? item.suhu :
-            tableName == 'kepadatanPendudukDbd' ? item.kepadatan : 'tidak ada data')
-        const xValues = latestData.filter(item => item.tanggal.split('-')[0] == currentYear).map(item => tableName ==
-            'DataPenyakitDbd' || tableName == 'FaktorLingkunganDbd' ||
-            tableName == 'KepadatanPendudukDbd' ?
-            item.kelurahan : item.kecamatan)
-        const barColors = latestData.map(() => getRandomColor());
+    
+        // Ambil data x dan y untuk grafik
+        const yValuesLastYear = dataLastYear.map(item => 
+            tableName === 'KasusHiv' ? item.ha_kasus : 
+            tableName === 'HotspotHiv' ? item.ha_kasus : 
+            tableName === 'PendudukMiskinHiv' ? item.pdd_miskin : 
+            tableName === 'TunaSusilaHiv' ? item.tn_susila : 
+            tableName === 'PendudukPriaProduktivHiv' ? item.pdd_lk_pro : 
+            tableName === 'WilayahRentanHiv' ? item.nilai_wr : 
+            tableName === 'CurahHujanIspa' ? item.curah_hujan : 
+            tableName === 'DataPenyakitIspa' ? item.jumlah_ispa_penderita : 
+            tableName === 'KelembapanIspa' ? item.kelembapan : 
+            tableName === 'KepadatanPendudukIspa' ? item.kpdt_bps : 
+            tableName === 'SuhuIspa' ? item.suhu : 
+            tableName === 'DataPenyakitDbd' ? item.kasus : 
+            tableName === 'FaktorLingkunganDbd' ? item.suhu : 
+            tableName === 'KepadatanPendudukDbd' ? item.kepadatan : 'tidak ada data'
+        );
+    
+        const xValuesLastYear = dataLastYear.map(item => 
+            tableName === 'DataPenyakitDbd' || tableName === 'FaktorLingkunganDbd' || tableName === 'KepadatanPendudukDbd' ? 
+            item.kelurahan : item.kecamatan
+        );
+    
+        // Debug xValues dan yValues
+        console.log('xValues Last Year:', xValuesLastYear);
+        console.log('yValues Last Year:', yValuesLastYear);
+    
         const ctx = document.getElementById('chart').getContext('2d');
-
-        currentChart = new Chart(ctx, {
-            type: tableName === 'DataPenyakitDbd' || tableName === 'FaktorLingkunganDbd' || tableName ===
-                'KepadatanPendudukDbd' ? 'bar' : 'pie',
+        const currentChart = new Chart(ctx, {
+            type: 'bar', // atau 'pie', tergantung kebutuhan
             data: {
-                labels: xValues.length !== 0 ? xValues : ['tidak ada Data'],
+                labels: xValuesLastYear.length !== 0 ? xValuesLastYear : ['Tidak Ada Data'],
                 datasets: [{
-                    backgroundColor: barColors,
-                    data: yValues.length !== 0 ? yValues : [1]
+                    backgroundColor: xValuesLastYear.map(() => getRandomColor()),
+                    data: yValuesLastYear.length !== 0 ? yValuesLastYear : [1]
                 }]
             },
             options: {
@@ -79,17 +97,11 @@
                     }
                 },
                 legend: {
-                    display: tableName === 'DataPenyakitDbd' || tableName === 'FaktorLingkunganDbd' || tableName ===
-                        'KepadatanPendudukDbd' ? false : true,
-                    position: 'left',
-                    labels: {
-                        fontSize: 14,
-                        boxWidth: 35
-                    }
+                    display: false
                 },
                 title: {
                     display: true,
-                    text: `Data Tahun ${currentYear}`,
+                    text: `Data Kasus HIV/AIDS Tahun ${lastYear}`,
                     fontSize: 18
                 },
                 responsive: true,
@@ -97,8 +109,8 @@
                 animation: {
                     duration: 1000,
                     easing: 'easeOutBounce'
-                },
+                }
             }
         });
-    </script>
+    </script>    
 @endsection

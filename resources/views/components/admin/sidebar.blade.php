@@ -57,13 +57,12 @@
         </div>
         <div class="sidebar-body">
             <ul class="nav">
-                <li class="nav-item nav-category">Halaman</li>
                 <li
                     class="nav-item {{ request()->routeIs('admin.data-penyakit-dbd.*', 'admin.faskes-pdp-hiv.*', 'admin.wilayah-rentan-hiv.*', 'admin.tuna-susila-hiv.*', 'admin.penduduk-pria-usi-produktiv-hiv.*', 'admin.penduduk-miskin-hiv.*', 'admin.lokasi-rawan-tuna-susila-hiv.*', 'admin.hostpot-hiv.*', 'admin.kasus-hiv.*', 'admin.news.*', 'admin.data-penyakit-dbd.*', 'admin.user*', 'admin.kepadatan-penduduk-dbd.*', 'admin.faktor-lingkungan-dbd.*', 'admin.data-penyakit-ispa.*', 'admin.kepadatan-penduduk-ispa.*', 'admin.curah-hujan-ispa.*', 'admin.kelembapan-ispa.*', 'admin.suhu-ispa.*') ? 'active' : '' }}">
                     <a class="nav-link" data-bs-toggle="collapse" href="#home" role="button" aria-expanded="false"
                         aria-controls="emails">
-                        <i class="link-icon" data-feather="grid"></i>
-                        <span class="link-title">Self Maintenance</span>
+                        <i class="link-icon" data-feather="grid" style="color: white;"></i>
+                        <span class="link-title text-white">Halaman Dashboard</span>
                         <i class="link-arrow" data-feather="chevron-down"></i>
                     </a>
                     <div class="collapse {{ request()->routeIs('admin.news.*', 'admin.faskes-pdp-hiv.*', 'admin.wilayah-rentan-hiv.*', 'admin.tuna-susila-hiv.*', 'admin.penduduk-pria-usi-produktiv-hiv.*', 'admin.penduduk-miskin-hiv.*', 'admin.lokasi-rawan-tuna-susila-hiv.*', 'admin.hostpot-hiv.*', 'admin.kasus-hiv.*', 'admin.data-penyakit-dbd.*', 'admin.user*', 'admin.kepadatan-penduduk-dbd.*', 'admin.faktor-lingkungan-dbd.*', 'admin.data-penyakit-ispa.*', 'admin.kepadatan-penduduk-ispa.*', 'admin.curah-hujan-ispa.*', 'admin.kelembapan-ispa.*', 'admin.suhu-ispa.*') ? 'show' : '' }}"
@@ -165,7 +164,7 @@
                                 class="nav-item {{ request()->routeIs('admin.kasus-hiv.*', 'admin.faskes-pdp-hiv.*', 'admin.wilayah-rentan-hiv.*', 'admin.tuna-susila-hiv.*', 'admin.penduduk-pria-usi-produktiv-hiv.*', 'admin.penduduk-miskin-hiv.*', 'admin.hostpot-hiv.*', 'admin.lokasi-rawan-tuna-susila-hiv.*') ? 'active' : '' }}">
                                 <a class="nav-link" data-bs-toggle="collapse" href="#hiv" role="button"
                                     aria-expanded="false" aria-controls="hiv">
-                                    <span class="link-title">HIV</span>
+                                    <span class="link-title text-white">HIV</span>
                                     <i class="link-arrow" data-feather="chevron-down"></i>
                                 </a>
                                 <div class="collapse {{ request()->routeIs('admin.kasus-hiv.*', 'admin.faskes-pdp-hiv.*', 'admin.wilayah-rentan-hiv.*', 'admin.tuna-susila-hiv.*', 'admin.penduduk-pria-usi-produktiv-hiv.*', 'admin.penduduk-miskin-hiv.*', 'admin.hostpot-hiv.*', 'admin.lokasi-rawan-tuna-susila-hiv.*') ? 'show' : '' }}"
@@ -173,45 +172,45 @@
                                     <ul class="nav sub-menu">
                                         <li class="nav-item">
                                             <a href="{{ route('admin.kasus-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.kasus-hiv.*') ? 'active' : '' }}">
+                                                class="nav-link {{ request()->routeIs('admin.kasus-hiv.*') ? 'active' : '' }} text-white">
                                                 Kasus HIV
                                             </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.hostpot-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.hostpot-hiv.*') ? 'active' : '' }}">
+                                                class="nav-link {{ request()->routeIs('admin.hostpot-hiv.*') ? 'active' : '' }} text-white">
                                                 Hotspot HIV</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.lokasi-rawan-tuna-susila-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.lokasi-rawan-tuna-susila-hiv.*') ? 'active' : '' }}">
+                                                class="nav-link {{ request()->routeIs('admin.lokasi-rawan-tuna-susila-hiv.*') ? 'active' : '' }} text-white">
                                                 Lok Rawan Tuna Susila</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.penduduk-miskin-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.penduduk-miskin-hiv.*') ? 'active' : '' }}">
+                                                class="nav-link {{ request()->routeIs('admin.penduduk-miskin-hiv.*') ? 'active' : '' }} text-white">
                                                 Penduduk Miskin
                                             </a>
                                         </li>
                                         <li class="nav-item ">
                                             <a href="{{ route('admin.penduduk-pria-usi-produktiv-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.penduduk-pria-usi-produktiv-hiv.*') ? 'active' : '' }}">Pria
+                                                class="nav-link {{ request()->routeIs('admin.penduduk-pria-usi-produktiv-hiv.*') ? 'active' : '' }} text-white">Pria
                                                 Usia
                                                 Produktif</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.tuna-susila-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.tuna-susila-hiv.*') ? 'active' : '' }}">Tuna
+                                                class="nav-link {{ request()->routeIs('admin.tuna-susila-hiv.*') ? 'active' : '' }} text-white">Tuna
                                                 Susila</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.wilayah-rentan-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.wilayah-rentan-hiv.*') ? 'active' : '' }}">Wilayah
+                                                class="nav-link {{ request()->routeIs('admin.wilayah-rentan-hiv.*') ? 'active' : '' }} text-white">Wilayah
                                                 Rentan HIV</a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.faskes-pdp-hiv.index') }}"
-                                                class="nav-link {{ request()->routeIs('admin.faskes-pdp-hiv.*') ? 'active' : '' }}">Faskes
+                                                class="nav-link {{ request()->routeIs('admin.faskes-pdp-hiv.*') ? 'active' : '' }} text-white">Faskes
                                                 PDP HIV</a>
                                         </li>
                                     </ul>
