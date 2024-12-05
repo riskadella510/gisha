@@ -79,38 +79,42 @@
     
         const ctx = document.getElementById('chart').getContext('2d');
         const currentChart = new Chart(ctx, {
-            type: 'bar', // atau 'pie', tergantung kebutuhan
-            data: {
-                labels: xValuesLastYear.length !== 0 ? xValuesLastYear : ['Tidak Ada Data'],
-                datasets: [{
-                    backgroundColor: xValuesLastYear.map(() => getRandomColor()),
-                    data: yValuesLastYear.length !== 0 ? yValuesLastYear : [1]
-                }]
-            },
-            options: {
-                layout: {
-                    padding: {
-                        top: 10,
-                        bottom: 8,
-                        left: 20,
-                        right: 20
-                    }
-                },
-                legend: {
-                    display: false
-                },
-                title: {
-                    display: true,
-                    text: `Data Kasus HIV/AIDS Tahun ${lastYear}`,
-                    fontSize: 18
-                },
-                responsive: true,
-                maintainAspectRatio: false,
-                animation: {
-                    duration: 1000,
-                    easing: 'easeOutBounce'
-                }
+    type: 'bar', // atau 'pie', tergantung kebutuhan
+    data: {
+        labels: xValuesLastYear.length !== 0 ? xValuesLastYear : ['Tidak Ada Data'],
+        datasets: [{
+            backgroundColor: xValuesLastYear.map(() => getRandomColor()),
+            data: yValuesLastYear.length !== 0 ? yValuesLastYear : [1]
+        }]
+    },
+    options: {
+        layout: {
+            padding: {
+                top: 10,
+                bottom: 8,
+                left: 20,
+                right: 20
             }
-        });
+        },
+        legend: {
+            display: false
+        },
+        title: {
+            display: true,
+            text: `Data Kasus HIV/AIDS Tahun ${lastYear}`,
+            fontSize: 18
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+            duration: 1000,
+            easing: 'easeOutBounce'
+        },
+        tooltips: {
+            enabled: false // Nonaktifkan tooltip
+        }
+    }
+});
+
     </script>    
 @endsection
