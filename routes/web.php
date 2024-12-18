@@ -62,6 +62,7 @@ Route::name('admin.')
             Route::resource('penduduk-pria-usi-produktiv-hiv', PendudukPriaProduktivHivController::class);
             Route::resource('tuna-susila-hiv', TunaSusilaHivController::class);
             Route::resource('wilayah-rentan-hiv', WilayahRentanHivController::class);
+            Route::resource('kepadatan-penduduk-ispa', KepadatanPendudukIspaController::class);
             Route::resource('faskes-pdp-hiv', FaskesPdpHivController::class);
             //  NEWS
             Route::resource('news', NewsController::class);

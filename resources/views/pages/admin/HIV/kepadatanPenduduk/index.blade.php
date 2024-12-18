@@ -35,7 +35,7 @@
                                         <th>NO</th>
                                         <th>Gambar</th>
                                         <th>Kecamatan</th>
-                                        <th>Jumlah Penduduk</th>
+                                        <th>Kepadatan bps</th>
                                         <th>Kelas</th>
                                         <th>Tanggal</th>
                                         <th>Operator</th>
@@ -75,7 +75,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="12" class="text-center">Tidak ada Jumlah Penduduk</td>
+                                            <td colspan="12" class="text-center">Tidak ada jumlah Penduduk</td>
                                         </tr>
                                     @endforelse
                                 </tbody>

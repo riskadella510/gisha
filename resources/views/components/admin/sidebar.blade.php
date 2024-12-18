@@ -71,7 +71,7 @@
                             <!-- News -->
                             <li class="nav-item">
                                 <a href="{{ route('admin.news.index') }}"
-                                    class="nav-link {{ request()->routeIs('admin.news.*') ? 'active' : '' }}">Edukasi</a>
+                                    class="nav-link {{ request()->routeIs('admin.news.*') ? 'active' : '' }} text-white">Edukasi</a>
                             </li>
 
                             <!-- DBD Submenu -->
@@ -161,7 +161,7 @@
 
                             <!-- HIV Submenu -->
                             <li
-                                class="nav-item {{ request()->routeIs('admin.kasus-hiv.*', 'admin.faskes-pdp-hiv.*', 'admin.wilayah-rentan-hiv.*', 'admin.tuna-susila-hiv.*', 'admin.penduduk-pria-usi-produktiv-hiv.*', 'admin.penduduk-miskin-hiv.*', 'admin.hostpot-hiv.*', 'admin.lokasi-rawan-tuna-susila-hiv.*') ? 'active' : '' }}">
+                                class="nav-item {{ request()->routeIs('admin.kasus-hiv.*', 'admin.faskes-pdp-hiv.*', 'admin.wilayah-rentan-hiv.*', 'admin.tuna-susila-hiv.*', 'admin.penduduk-pria-usi-produktiv-hiv.*', 'admin.penduduk-miskin-hiv.*', 'admin.hostpot-hiv.*', 'admin.lokasi-rawan-tuna-susila-hiv.*', 'admin.kepadatan-penduduk-dbd.*') ? 'active' : '' }}">
                                 <a class="nav-link" data-bs-toggle="collapse" href="#hiv" role="button"
                                     aria-expanded="false" aria-controls="hiv">
                                     <span class="link-title text-white">HIV</span>
@@ -207,6 +207,12 @@
                                             <a href="{{ route('admin.wilayah-rentan-hiv.index') }}"
                                                 class="nav-link {{ request()->routeIs('admin.wilayah-rentan-hiv.*') ? 'active' : '' }} text-white">Wilayah
                                                 Rentan HIV</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.kepadatan-penduduk-ispa.index') }}"
+                                                class="nav-link {{ request()->routeIs('admin.kepadatan-penduduk-ispa.*') ? 'active' : '' }} text-white">
+                                                Jumlah Penduduk
+                                            </a>
                                         </li>
                                         <li class="nav-item">
                                             <a href="{{ route('admin.faskes-pdp-hiv.index') }}"

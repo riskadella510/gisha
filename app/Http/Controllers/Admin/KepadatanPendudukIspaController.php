@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\KepadatanPendudukIspa;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class KepadatanPendudukIspaController extends Controller
@@ -64,7 +64,7 @@ class KepadatanPendudukIspaController extends Controller
                     'geometry' => json_encode($feature['geometry']),
                     'kecamatan' => $feature['properties']['KECAMATAN'],
                     'kpdt_bps' => $kpdt_bps_value,
-                    'kelas_kpdt' => $feature['properties']['KELAS_KPDT'],
+                    'kelas_kpdt' => $feature['properties']['kelas_kpdt'],
                     'operator' => $request->operator,
                     'tanggal' => $request->tanggal,
                     'gambar' => $gambar,

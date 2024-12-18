@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\KepadatanPendudukDbd;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class KepadatanPendudukDbdController extends Controller
@@ -48,17 +48,13 @@ class KepadatanPendudukDbdController extends Controller
 
         foreach ($data['features'] as $feature) {
             KepadatanPendudukDbd::create([
-                'remark' => $feature['properties']['REMARK'],
-                'kelurahan' => $feature['properties']['Kelurahan'],
-                'kecamatan' => $feature['properties']['Kecamatan'],
-                'LK' => $feature['properties']['LK'],
-                'PR' => $feature['properties']['PR'],
-                'kepadatan' => $feature['properties']['Kepadatan'],
                 'geometry' => json_encode($feature['geometry']),
-                'tingkat_ka' => $feature['properties']['Kelas_pddk'],
-                'gambar' => $gambar,
+                'kecamatan' => $feature['properties']['KECAMATAN'],
+                'jumlah penduduk' => $feature['properties']['jml_pddk'],
+                'kelas' => $feature['properties']['kelas_kpdt'],
                 'operator' => $request->operator,
                 'tanggal' => $request->tanggal,
+                'gambar' => $gambar,
             ]);
         }
 
@@ -86,13 +82,9 @@ class KepadatanPendudukDbdController extends Controller
         ]);
 
         $kepadatanPendudukDbd->update([
-            'remark' => $request->input('remark'),
-            'kelurahan' => $request->input('kelurahan'),
             'kecamatan' => $request->input('kecamatan'),
-            'LK' => $request->input('LK'),
-            'PR' => $request->input('PR'),
-            'kepadatan' => $request->input('kepadatan'),
-            'tingkat_ka' => $request->input('tingkat_ka'),
+            'jumlah penduduk' => $request->input('jml_pddk'),
+            'kelas' => $request->input('kelas_pddk'),
             'geometry' => $request->input('geometry'),
         ]);
 

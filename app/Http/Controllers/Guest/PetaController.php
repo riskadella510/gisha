@@ -57,6 +57,8 @@ class PetaController extends Controller
             TunaSusilaHiv::pluck('kecamatan')
         )->merge(
             WilayahRentanHiv::pluck('kecamatan')
+            )->merge(
+                KepadatanPendudukIspa::pluck('kecamatan')
         )->unique()->values();
 
         return view('layouts.peta', [
@@ -195,6 +197,13 @@ class PetaController extends Controller
                     }
                     $filteredData = $query->get();
                     break;
+                case 'kepadatan_penduduk':
+                        $query = KepadatanPendudukIspa::whereYear('tanggal', $tahun);
+                        if ($bulan) {
+                            $query->whereMonth('tanggal', $bulan);
+                        }
+                        $filteredData = $query->get();
+                        break;
                 case 'faskes_hiv':
                     $query = FaskesPdpHiv::whereYear('tanggal', $tahun);
                     if ($bulan) {

@@ -1,7 +1,7 @@
 <div class="p-4 bg-[#F0F0F0]">
     <div class="flex flex-col items-center">
         <!--<div class="flex items-center md:justify-between flex-col md:flex-row">-->
-        <div class="flex items-center justify-center space-x-[600px]">
+        <!--<div class="flex items-center justify-center space-x-[600px]">
             <div class="flex flex-col items-center">
                 <div class="p-2 font-bold text-[#D95639] w-fit rounded bg-[#fcd4ca]">
                     Metadata GISHA
@@ -9,7 +9,7 @@
                 <h1 class="text-1xl font-bold text-center mb-4">
                     Menyajikan Data HIV/AIDS <br /> dan Parameternya dalam Visualisasi Peta
                 </h1>
-            </div>
+            </div>-->
             <!--<div>
                 <div class=" w-full h-10"></div>
                 <h1 class="text-right text-[15px]  md:mt-0 md:ml-4">
@@ -17,7 +17,15 @@
                     Cepat
                     <br /> dan Akurat
                 </h1>
-            </div>-->
+            </div>
+        </div>-->
+        <div class="flex flex-col w-full max-w-screen-lg items-center py-5 px-8 md:px-16 lg:px-20 mx-auto">
+
+            <h2 class="mb-4 text-[#D95639] font-bold text-3xl text-center">Metadata GISHA</h2>
+            <p class="text-center  mb-4">
+                Informasi HIV/AIDS dalam bentuk visualisasi peta cetak
+            </p>
+            
         </div>
     </div>
 
@@ -114,16 +122,32 @@
 <div>
     <div class="p-4 bg-[#F0F0F0]">
         <!--<hr class="w-1/2 border-t-4 border-black mx-auto mt-14">-->
-        <div class="flex flex-col items-center max-w-xl mx-auto p-8">
+        <h2 class="mb-4 text-[#D95639] font-bold text-3xl text-center">
+            Panduan GISHA
+        </h2>
+        <p class="text-center  mb-2">
+            Informasi HIV/AIDS dalam bentuk visualisasi peta cetak
+        </p>
+        <div class="flex justify-center items-center mt-5">
+                <iframe width="800" height="450"
+                    src="https://www.youtube.com/embed/Y1w8n0sVlmI" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+    </div>
+
+        <!--<div class="flex flex-col items-center max-w-xl mx-auto p-8">
             <div class="p-2 font-bold text-[#D95639] w-fit rounded bg-[#fcd4ca]">
                 Panduan GISHA
             </div>
-            <h1 class="text-1xl font-bold text-center mb-4">Berikut Video Panduan Penggunaan GISHA</h1>
+            <h1 class="text-1xl font-bold text-center mb-4">Berikut Video Panduan Penggunaan GISHA</h1>-->
             
             <!-- Embed Video YouTube -->
-            <div class="relative aspect-w-16 aspect-h-9">
+            <!--<div class="relative aspect-w-16 aspect-h-9">
                 <iframe width="800" height="450" src="https://www.youtube.com/embed/Y1w8n0sVlmI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            </div>-->
             
             <!-- Keterangan tambahan -->
             <!--<p class="text-center mt-4 text-lg">Inilah video demo terbaru kami!</p>-->
@@ -232,6 +256,13 @@
                 'Wilayah Rentan HIV');
         @else
             console.error("Wilayah Rentan HIV data not available");
+        @endif
+
+        @if ($kepadatanIspa && $kepadatanIspa->gambar)
+            renderDetailParam("{{ asset('storage/kepadatanPendudukIspa/' . $kepadatanIspa->gambar) }}",
+                'Kepadatan Penduduk');
+        @else
+            console.error("Kepadatan Penduduk ISPA data not available");
         @endif
         
         @if ($faskesPdpHiv && $faskesPdpHiv->gambar)

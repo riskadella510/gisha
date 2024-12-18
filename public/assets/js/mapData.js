@@ -87,7 +87,7 @@ const mapData = {
             },
             {
                 value: "hotspot",
-                text: "Hotspot",
+                text: "Hotspot HIV",
                 legends: {
                     "hot spot area": "rgb(250, 7, 7)",
                     "netral area": "rgb(217, 222, 222)",
@@ -125,8 +125,19 @@ const mapData = {
                 },
             },
             {
+                value: "kepadatan_penduduk",
+                text: "Jumlah Penduduk",
+                legends: {
+                    "sangat tinggi": "rgb(107, 0, 0)",
+                    tinggi: "rgb(173, 83, 19)",
+                    sedang: "rgb(242, 167, 46)",
+                    rendah: "rgb(250, 209, 85)",
+                    "sangat rendah": "rgb(255, 255, 128)",
+                },
+            },
+            {
                 value: "faskes_hiv",
-                text: "Faskes HIV",
+                text: "Faskes PDP HIV",
             },
         ],
     },

@@ -46,6 +46,7 @@
         const usiaProduktifHiv = baseDataHIV.usiaProduktif;
         const tunaSusilaHiv = baseDataHIV.tunaSusila;
         const wilayahRentanHiv = baseDataHIV.wilayahRentan;
+        const kepadatanIspa = baseDataHIV.kepadatanPenduduk;
         const filterTahunContainer = document.getElementById('filter-tahun');
         const filterBulanContainer = document.getElementById('filter-bulan');
         const kasusHivParam = document.getElementById('kasus-hiv')
@@ -54,6 +55,7 @@
         const priaProduktifParam = document.getElementById('pria-produktif')
         const tunaSusilaParam = document.getElementById('tuna-susila')
         const wilayahRentanParam = document.getElementById('wilayah-rentan')
+        const kepadatanIspaParam = document.getElementById('kepadatan-ispa')
         const title = document.getElementById('title')
         const currentYear = new Date().getFullYear().toString();
         const currentMonth = new Date().getMonth();
@@ -194,6 +196,7 @@
             tunaSusilaParam.classList.remove('font-bold')
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.remove('font-bold')
+            kelembapanIspaParam.classList.remove('font-bold')
             selectedData = kasusHiv
             filterData(currentYear, currentMonth)
             resetFilter()
@@ -220,6 +223,7 @@
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.remove('font-bold')
             pendudukMiskinParam.classList.add('font-bold')
+            kelembapanIspaParam.classList.remove('font-bold')
             selectedData = pendudukMiskinHiv
             filterData(currentYear, currentMonth)
             resetFilter()
@@ -233,6 +237,7 @@
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.remove('font-bold')
             pendudukMiskinParam.classList.remove('font-bold')
+            kelembapanIspaParam.classList.remove('font-bold')
             selectedData = tunaSusilaHiv
             filterData(currentYear, currentMonth)
             resetFilter()
@@ -246,6 +251,7 @@
             wilayahRentanParam.classList.add('font-bold')
             priaProduktifParam.classList.remove('font-bold')
             pendudukMiskinParam.classList.remove('font-bold')
+            kelembapanIspaParam.classList.remove('font-bold')
             selectedData = wilayahRentanHiv
             filterData(currentYear, currentMonth)
             resetFilter()
@@ -259,7 +265,22 @@
             wilayahRentanParam.classList.remove('font-bold')
             priaProduktifParam.classList.add('font-bold')
             pendudukMiskinParam.classList.remove('font-bold')
+            kelembapanIspaParam.classList.remove('font-bold')
             selectedData = usiaProduktifHiv
+            filterData(currentYear, currentMonth)
+            resetFilter()
+            renderFilter(selectedData)
+        })
+        kepadatanIspaParam.addEventListener('click', function() {
+            title.innerHTML = 'Kepadatan Penduduk ISPA'
+            kasusHivParam.classList.remove('font-bold')
+            /*hotspotHivParam.classList.remove('font-bold')*/
+            tunaSusilaParam.classList.remove('font-bold')
+            wilayahRentanParam.classList.remove('font-bold')
+            priaProduktifParam.classList.remove('font-bold')
+            pendudukMiskinParam.classList.remove('font-bold')
+            kelembapanIspaParam.classList.add('font-bold')
+            selectedData = kepadatanIspa
             filterData(currentYear, currentMonth)
             resetFilter()
             renderFilter(selectedData)
@@ -274,7 +295,7 @@
                 .ha_kasus : selectedData == pendudukMiskinHiv ? item.pdd_miskin : selectedData == tunaSusilaHiv ? item
                 .tn_susila : selectedData == usiaProduktifHiv ?
                 item.pdd_lk_pro : selectedData == wilayahRentanHiv ?
-                item.nilai_wr : 0);
+                item.nilai_wr : selectedData == kepadatanIspa ? item.kpdt_bps: 0);
             const barColors = filteredData.map(() => getRandomColor());
             const ctx = document.getElementById('chart').getContext('2d');
 

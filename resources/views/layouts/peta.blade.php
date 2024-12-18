@@ -63,10 +63,13 @@
 
         .sidebar-body {
             margin: 20px !important;
-            background-color: #D95639 !important;
+            background-color: white;
+            border: 3px solid #D95639 !important; /* Border hitam pekat */
             border-radius: 15px !important;
+            color: black !important;
             max-height: 80vh;
             overflow-y: scroll;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
         }
 
         .sidebar-body::-webkit-scrollbar {
@@ -86,15 +89,26 @@
             border-right: none !important;
         }
 
+        .form-select {
+            border: 2px solid #D95639; /* Border hitam lebih tebal */
+            border-radius: 5px !important;
+            padding: 5px;
+        }
+        
+
         .tombol-terapkan {
             width: 100% !important;
-            border: none !important;
+            border: 2px #D95639; /* Tambahkan border hitam */
             border-radius: 5px !important;
-            padding: 5px !important;
+            padding: 10px !important;
+            background-color: #D95639; /* Warna tombol */
+            color: white !important;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         .tombol-terapkan:hover {
-            background-color: #d97666 !important;
+            background-color: #595452 !important; /* Warna saat hover */
             color: white !important;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
@@ -113,18 +127,34 @@
         }
 
         .legenda-icon {
-            /* width: 12px;
-            height: 12px; */
             margin-right: 5px;
         }
 
+        .nav-link. {
+            color: #121212 !important;
+            cursor: default;
+        }
+        
         .nav-link.active {
-            color: #D95639 !important;
+            color: #121212 !important;
+        }
+
+        .nav-link:not(.active) {
+            color: #121212 !important;
         }
 
         .nav-link:hover {
             color: #D95639 !important;
         }
+
+        .nav-link:focus {
+            color: #121212 !important;
+        }
+
+        .dropdown:focus-within .nav-link {
+    color: #151414 !important; /* Merah */
+}
+
 
         #map {
             height: 100%;
@@ -190,7 +220,6 @@
             left: 340px !important;
         }
 
-
         .ol-zoom {
             top: 70px !important;
             display: flex;
@@ -231,9 +260,7 @@
             right: 400px !important;
             left: auto;
             background-color: rgba(210, 209, 209, 0.806);
-            /* Latar belakang transparan */
             color: black !important;
-            /* Warna teks putih */
             padding: 10px 20px !important;
             border-radius: 10px;
             font-size: 12px;
@@ -248,12 +275,11 @@
             height: 50px;
             background-color: #D95639;
             color: white;
-            border: none;
+            border: black;
             border-radius: 50%;
             cursor: pointer;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            /* Agar selalu di depan */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -265,12 +291,10 @@
 
         .menu-button:hover {
             background-color: #B2452B;
-            /* Warna saat hover */
         }
 
         .menu-button i {
             font-size: 24px;
-            /* Ukuran ikon */
         }
 
         .screenshot-button {
@@ -286,20 +310,25 @@
             cursor: pointer;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             z-index: 1000;
-            /* Agar selalu di depan */
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
         .screenshot-button:hover {
-            background-color: #B2452B;
-            /* Warna saat hover */
+            background-color: #D95639;
         }
 
         .screenshot-button i {
             font-size: 24px;
-            /* Ukuran ikon */
+        }
+        .setting-button {
+            color: #a4a4a4;
+            cursor: pointer;
+        }
+
+        .setting-button:hover {
+            color: #B2452B
         }
 
         .map-theme-selector {
@@ -317,6 +346,7 @@
             align-items: center;
             background-color: white;
             color: #D95639;
+            border: 2px solid #D95639;
             font-weight: bold;
             text-align: center;
             border-radius: 8px;
@@ -356,7 +386,10 @@
         .map-option input[type="radio"]:checked+label {
             background-color: #f4f4f4af;
         }
+
+        
     </style>
+
 
     @yield('css')
 
@@ -376,9 +409,9 @@
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#filters" role="button"
                             aria-expanded="false" aria-controls="filters">
-                            <i class="link-icon text-white" data-feather="filter"></i>
-                            <span class="link-title text-white">Filter</span>
-                            <i class="link-arrow text-white" data-feather="chevron-down"></i>
+                            <i class="link-icon text-black" data-feather="filter"></i>
+                            <span class="link-title text-red">Filter</span>
+                            <i class="link-arrow text-black" data-feather="chevron-down"></i>
                         </a>
                         <div class="collapse" id="filters">
                             <form id="filter-form">
@@ -422,7 +455,7 @@
                                         <div class="mb-3">
                                             <select class="form-select form-select-sm" id="jenisParameter"
                                                 name="jenisParameter">
-                                                <option selected disabled>Pilih Jenis Parameter</option>
+                                                <option selected disabled>Pilih Jenis Data</option>
                                             </select>
                                         </div>
                                     </li>
@@ -596,17 +629,35 @@
                     </li>-->
 
                     <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#deskripsi" role="button"
+                            aria-expanded="false" aria-controls="deskripsi">
+                            <i class="link-icon text-black" data-feather="book-open"></i>
+                            <span class="link-title text-red">Deskripsi Peta</span>
+                            <i class="link-arrow text-black" data-feather="chevron-down"></i>
+                        </a>
+                        <div class="collapse" id="deskripsi">
+                            <ul class="nav sub-menu">
+                                <li class="nav-item">
+                                    <div id="deskripsi-wilayah" class="text-grey" style="color: #090909;">
+                                    <p class="text-grey" style="color: #bab6b5;">Deskripsi ini akan tampil berdasarkan
+                                        filter data yang Anda terapkan</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#legenda" role="button"
                             aria-expanded="false" aria-controls="legenda">
-                            <i class="link-icon text-white" data-feather="flag"></i>
-                            <span class="link-title text-white">Legenda</span>
-                            <i class="link-arrow text-white" data-feather="chevron-down"></i>
+                            <i class="link-icon text-black" data-feather="flag"></i>
+                            <span class="link-title text-red">Legenda</span>
+                            <i class="link-arrow text-black" data-feather="chevron-down"></i>
                         </a>
                         <div class="collapse" id="legenda">
                             <ul class="nav sub-menu">
-                                <li class="nav-item text-white">
+                                <li class="nav-item text-grey">
                                     <div id="legenda-list">
-                                        <p class="text-white">Legenda ini akan tampil berdasarkan filter / transparansi
+                                        <p class="text-grey" style="color: #bab6b5;">Legenda ini akan tampil berdasarkan filter data
                                             yang
                                             Anda
                                             terapkan</p>
@@ -619,9 +670,9 @@
                     <li class="nav-item">
                         <a class="nav-link" data-bs-toggle="collapse" href="#basemap" role="button"
                             aria-expanded="false" aria-controls="basemap">
-                            <i class="link-icon text-white" data-feather="map"></i>
-                            <span class="link-title text-white">Basemap</span>
-                            <i class="link-arrow text-white" data-feather="chevron-down"></i>
+                            <i class="link-icon text-black" data-feather="map"></i>
+                            <span class="link-title text-red">Basemap</span>
+                            <i class="link-arrow text-black" data-feather="chevron-down"></i>
                         </a>
                         <div class="collapse" id="basemap">
                             <ul class="nav sub-menu">
@@ -686,24 +737,6 @@
                         </div>
                     </li>
 
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="collapse" href="#deskripsi" role="button"
-                            aria-expanded="false" aria-controls="deskripsi">
-                            <i class="link-icon text-white" data-feather="book-open"></i>
-                            <span class="link-title text-white">Deskripsi Peta</span>
-                            <i class="link-arrow text-white" data-feather="chevron-down"></i>
-                        </a>
-                        <div class="collapse" id="deskripsi">
-                            <ul class="nav sub-menu">
-                                <li class="nav-item">
-                                    <p id="deskripsi-wilayah" class="text-white">Deskripsi ini akan tampil berdasarkan
-                                        filter /
-                                        transparansi yang Anda terapkan</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
                 </ul>
             </div>
         </nav>
@@ -921,14 +954,14 @@
             $('#legenda-list').empty();
 
             // check if legendItems is an array of object and every item has property 'disease' and 'parameter'
-            if (!Array.isArray(legendItems) || !legendItems.every(item => item.disease && item.parameter)) {
+            if (!Array.isArray(legendItems) || !legendItems.every(item => item.parameter)) {
                 return;
             }
 
             // set is used to remove duplicates data
             const legendItemsSet = new Set();
             legendItems.forEach((item) => {
-                const key = `${item.disease}-${item.parameter}`;
+                const key = `${item.parameter}`;
                 if (!legendItemsSet.has(key)) {
                     legendItemsSet.add(key);
 
@@ -943,7 +976,7 @@
                     const legendItemElement = document.createElement('div');
                     legendItemElement.classList.add('mb-3');
                     legendItemElement.innerHTML = `
-                                        <p>${item.disease} - ${parameterText}</p>
+                                        <p>${parameterText}</p>
                                         ${Object.entries(legends).map(([key, value]) => `<p><i class="bi bi-square-fill legenda-icon" style="color: ${value}"></i><span>${key.charAt(0).toUpperCase() + key.slice(1)}</span></p>`).join('')}
                                     `;
                     $('#legenda-list').append(legendItemElement);
@@ -977,8 +1010,12 @@
 
             const parameterText = mapData[jenisPenyakit].options.find(option => option.value === jenisParameter)
                 .text ?? '';
-            setMapDescriptionTo(
+            /*setMapDescriptionTo(
                 `Data ${jenisPenyakit} berdasarkan ${parameterText} Tahun ${tahun} `
+            );*/
+
+            setMapDescriptionTo(
+                `Data ${parameterText} Kabupaten Bantul Tahun ${tahun} `
             );
 
             $.ajax({
@@ -1055,7 +1092,7 @@
                                     break;
                                 case 'kepadatan_penduduk':
                                     feature.set('kecamatan', item.kecamatan)
-                                    feature.set('nilai kepadatan penduduk', item.kpdt_bps)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
                                     feature.set('kelas', item.kelas_kpdt)
                                     feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
@@ -1117,6 +1154,12 @@
                                     feature.set('kelas', item.kelas)
                                     feature.set('tingkat_ka', item.kelas)
                                     break;
+                                case 'kepadatan_penduduk':
+                                    feature.set('kecamatan', item.kecamatan)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
+                                    feature.set('kelas', item.kelas_kpdt)
+                                    feature.set('tingkat_ka', item.kelas_kpdt)
+                                    break;
                                 case 'faskes_hiv':
                                     feature.set('kecamatan', item.kecamatan)
                                     feature.set('faskes', item.faskes_pdp)
@@ -1128,9 +1171,9 @@
                     })
 
                     const newVectorLayer = new ol.layer.Vector({
-                        source: vectorSource,
-                        style: function(feature) {
-                            if (jenisParameter === 'faskes_hiv') {
+    source: vectorSource,
+    style: function(feature) {
+        if (jenisParameter === 'faskes_hiv') {
                                 return new ol.style.Style({
                                     image: new ol.style.Icon({
                                         src: 'assets/images/hospital-marker-icon.png',
@@ -1140,33 +1183,56 @@
                                 })
                             }
 
-                            let fillColor = 'rgba(0, 0, 0, 0.6)';
-                            const tingkatKa = feature.get('tingkat_ka').toLowerCase();
+        let fillColor = 'rgba(0, 0, 0, 0.6)';
+        const tingkatKa = feature.get('tingkat_ka')?.toLowerCase() || '';
 
-                            // get legends 
-                            const options = mapData[jenisPenyakit].options
-                            const selectedOptions = options.find((option) => option
-                                .value === jenisParameter);
+        // Dapatkan legenda
+        const options = mapData[jenisPenyakit]?.options || [];
+        const selectedOptions = options.find((option) => option.value === jenisParameter);
 
-                            if (!selectedOptions) return;
-                            const legends = selectedOptions.legends
-                            fillColor = legends[tingkatKa] ?? 'rgba(0, 0, 0, 0.6)';
+        if (selectedOptions) {
+            const legends = selectedOptions.legends || {};
+            fillColor = legends[tingkatKa] ?? 'rgba(0, 0, 0, 0.6)';
+        }
 
-                            return new ol.style.Style({
-                                fill: new ol.style.Fill({
-                                    color: fillColor
-                                }),
-                                stroke: new ol.style.Stroke({
-                                    color: '#333',
-                                    width: 1
-                                })
-                            });
-                        }
-                    });
+        // Gaya utama (warna isian dan garis batas)
+        const mainStyle = new ol.style.Style({
+            fill: new ol.style.Fill({
+                color: fillColor
+            }),
+            stroke: new ol.style.Stroke({
+                color: '#333',
+                width: 1.5
+            })
+        });
 
-                    map.addLayer(newVectorLayer);
+        // Gaya label (nama kecamatan)
+        const labelStyle = new ol.style.Style({
+            text: new ol.style.Text({
+                text: feature.get('kecamatan') || '', // Nama kecamatan
+                font: '10px Arial',
+                fill: new ol.style.Fill({
+                    color: '#000'
+                }),
+                stroke: new ol.style.Stroke({
+                    color: '#fff',
+                    width: 2
+                }),
+                overflow: true, // Agar teks tidak terpotong
+            })
+        });
 
-                    toastr.success('Data berhasil dimuat!');
+        // Kembalikan array gaya
+        return [mainStyle, labelStyle];
+    }
+});
+
+// Tambahkan layer ke peta
+map.addLayer(newVectorLayer);
+
+// Berikan notifikasi
+toastr.success('Data berhasil dimuat!');
+
                 },
                 error: function() {
                     toastr.error('Gagal memuat data.');
@@ -1420,7 +1486,7 @@
                                     break;
                                 case 'kepadatan_penduduk':
                                     feature.set('kecamatan', item.kecamatan)
-                                    feature.set('nilai kepadatan penduduk', item.kpdt_bps)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
                                     feature.set('kelas', item.kelas_kpdt)
                                     feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
@@ -1481,6 +1547,12 @@
                                     feature.set('kecamatan', item.kecamatan)
                                     feature.set('kelas', item.kelas)
                                     feature.set('tingkat_ka', item.kelas)
+                                    break;
+                                case 'kepadatan_penduduk':
+                                    feature.set('kecamatan', item.kecamatan)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
+                                    feature.set('kelas', item.kelas_kpdt)
+                                    feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
                                 case 'faskes_hiv':
                                     feature.set('kecamatan', item.kecamatan)
@@ -1609,7 +1681,7 @@
                                     break;
                                 case 'kepadatan_penduduk':
                                     feature.set('kecamatan', item.kecamatan)
-                                    feature.set('nilai kepadatan penduduk', item.kpdt_bps)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
                                     feature.set('kelas', item.kelas_kpdt)
                                     feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
@@ -1670,6 +1742,12 @@
                                     feature.set('kecamatan', item.kecamatan)
                                     feature.set('kelas', item.kelas)
                                     feature.set('tingkat_ka', item.kelas)
+                                    break;
+                                case 'kepadatan_penduduk':
+                                    feature.set('kecamatan', item.kecamatan)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
+                                    feature.set('kelas', item.kelas_kpdt)
+                                    feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
                                 case 'faskes_hiv':
                                     feature.set('kecamatan', item.kecamatan)
@@ -1817,7 +1895,7 @@
                                     break;
                                 case 'kepadatan_penduduk':
                                     feature.set('kecamatan', item.kecamatan)
-                                    feature.set('nilai kepadatan penduduk', item.kpdt_bps)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
                                     feature.set('kelas', item.kelas_kpdt)
                                     feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
@@ -2018,7 +2096,7 @@
                                     break;
                                 case 'kepadatan_penduduk':
                                     feature.set('kecamatan', item.kecamatan)
-                                    feature.set('nilai kepadatan penduduk', item.kpdt_bps)
+                                    feature.set('jumlah  penduduk', item.kpdt_bps)
                                     feature.set('kelas', item.kelas_kpdt)
                                     feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
@@ -2079,6 +2157,12 @@
                                     feature.set('kecamatan', item.kecamatan)
                                     feature.set('kelas', item.kelas)
                                     feature.set('tingkat_ka', item.kelas)
+                                    break;
+                                case 'kepadatan_penduduk':
+                                    feature.set('kecamatan', item.kecamatan)
+                                    feature.set('jumlah penduduk', item.kpdt_bps)
+                                    feature.set('kelas', item.kelas_kpdt)
+                                    feature.set('tingkat_ka', item.kelas_kpdt)
                                     break;
                                 case 'faskes_hiv':
                                     feature.set('kecamatan', item.kecamatan)

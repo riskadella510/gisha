@@ -125,6 +125,13 @@
                         stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
                 Wilayah Rentan HIV</button>
+                <button class="text-left" id="kepadatan-ispa"><svg class="inline" width="19" height="20"
+                    viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.4584 2.08325V3.66659M9.50004 2.08325V3.66659M5.54171 2.08325V3.66659M6.33337 12.3749H9.50004M6.33337 8.41658H12.6667M2.77087 8.41658C2.77087 5.80409 2.77087 4.49784 3.58233 3.68638C4.39379 2.87492 5.70004 2.87492 8.31254 2.87492H10.6875C13.3 2.87492 14.6063 2.87492 15.4177 3.68638C16.2292 4.49784 16.2292 5.80409 16.2292 8.41658V12.3749C16.2292 14.9874 16.2292 16.2937 15.4177 17.1051C14.6063 17.9166 13.3 17.9166 10.6875 17.9166H8.31254C5.70004 17.9166 4.39379 17.9166 3.58233 17.1051C2.77087 16.2937 2.77087 14.9874 2.77087 12.3749V8.41658Z"
+                        stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                Jumlah Penduduk</button>
         </div>
     </div>
     <!--<div>
