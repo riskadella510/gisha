@@ -1,4 +1,4 @@
-<div class="p-4 bg-[#F0F0F0]">
+<div class="p-2 bg-[#F0F0F0]">
     <div class="flex flex-col items-center">
         <!--<div class="flex items-center md:justify-between flex-col md:flex-row">-->
         <!--<div class="flex items-center justify-center space-x-[600px]">
@@ -19,17 +19,21 @@
                 </h1>
             </div>
         </div>-->
-        <div class="flex flex-col w-full max-w-screen-lg items-center py-5 px-8 md:px-16 lg:px-20 mx-auto">
-
-            <h2 class="mb-4 text-[#D95639] font-bold text-3xl text-center">Metadata GISHA</h2>
-            <p class="text-center  mb-4">
+        <div class="p-2 bg-[#F0F0F0]">
+            <!--<hr class="w-1/2 border-t-4 border-black mx-auto mt-14">-->
+            <h2 class="mb-4 text-[#D95639] font-bold text-3xl text-center">
+                Metadata GISHA
+            </h2>
+            <p class="text-center  mb-2">
                 Informasi HIV/AIDS dalam bentuk visualisasi peta cetak
             </p>
             
         </div>
     </div>
+ 
+       
 
-    <div class="flex flex-col md:flex-row justify-center items-center gap-4 flex-wrap mt-2">
+    <div class="flex justify-center items-center mt-2">
         <!--<div class="bg-white p-6 rounded-xl w-[416px] h-fit">
             <div class="flex flex-col space-y-6">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none"
@@ -120,7 +124,7 @@
 </div>
 
 <div>
-    <div class="p-4 bg-[#F0F0F0]">
+    <div class="p-8 bg-[#F0F0F0]">
         <!--<hr class="w-1/2 border-t-4 border-black mx-auto mt-14">-->
         <h2 class="mb-4 text-[#D95639] font-bold text-3xl text-center">
             Panduan GISHA

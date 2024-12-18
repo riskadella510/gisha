@@ -1,14 +1,14 @@
 <div style="background-color: #e74340;" class="w-full h-auto p-4 text-white">
     <div class="pt-14 flex lg:flex-row flex-col gap-8 justify-center space-x-6">
-        <div class="lg:text-left text-center">
-            <h1 class="font-bold text-2xl">GISHA</h1>
+        <div class="flex flex-col items-center">
+            <h1 class="font-bold">GISHA</h1>
             <img src={{ asset('./assets/images/logogisha.png') }} class="mt-5 h-[96.31px] w-[100px]" alt="kota">
-            <div class="mt-6">
+            <div class="mt-2 text-center">
                 <h1 class="font-light leading-[21px]">Sistem Informasi Kesehatan <br /> HIV/AIDS Berbasis WebGIS</h1>
                 <!--<p class="leading-[21px] font-light ">Yang lebih sering diperbarui <br /> khususnya di Bantul</p>-->
             </div>
         </div>
-        <div class=" flex flex-col items-center">
+        <div class="flex flex-col items-center">
             <h1 class="font-semibold">Pelayanan</h1>
             <img src={{ asset('./assets/images/others/logobantul.png') }} class="mt-5 h-[96.31px] w-[100px]" alt="kota">
             <div class="mt-2 text-center">

@@ -98,67 +98,76 @@
         box-sizing: border-box !important;
     }
 
-    .main-wrapper .page-wrapper {
-        width: 100% !important;
-        margin-left: 0 !important;
+    .content-wrapper {
+        padding-left: 3rem;  /* Padding kiri 3rem (48px) */
+        padding-right: 3rem; /* Padding kanan 3rem (48px) */
+    
+    }
+    .content-wrapper {
+        margin-left: -50px; /* Geser teks sedikit ke kiri */
+    }
+
+    @media (min-width: 1024px) {
+        .content-wrapper {
+            padding-left: 6rem;  /* Padding kiri lebih besar untuk layar besar */
+            padding-right: 6rem; /* Padding kanan lebih besar untuk layar besar */
+        }
+    }
+
+    .image-wrapper img {
+        max-width: 500px; /* Batasi ukuran gambar maksimal */
+        height: auto;     /* Menjaga rasio aspek gambar */
+        display: block;
+        margin: 0 auto;   /* Gambar ditengah */
+    }
+
+    .content-container {
+        background-color: #F0F0F0; /* Warna latar belakang */
+        padding: 2rem 0;          /* Jarak vertikal */
     }
 </style>
 
-<!--<div class="flex py-8 lg:flex-row flex-col md:px-16 bg-[#efdddd] items-center">-->
-    
-    <div class="flex flex-col lg:flex-row items-center bg-[#F0F0F0] py-10 px-6 md:px-12 lg:px-20 gap-10 border-4 border-blue-300">
-        <div class="flex w-full lg:w-1/2 items-center bg-transparent">
-            <div class="flex justify-center items-center w-full">
-                <img src="./assets/images/hivtentang.png" alt="Deskripsi Gambar" class="w-3/4 md:w-1/2 max-w-xs h-auto">
-            </div>
-        </div>
-        <div class="flex flex-col w-full max-w-screen-lg items-center py-5 px-8 md:px-16 lg:px-20 mx-auto">
+<div class="flex flex-col lg:flex-row items-center content-container">
+    <!-- Kolom Gambar -->
+    <div class="image-wrapper flex justify-center w-full lg:w-1/2">
+        <img src="./assets/images/hivtentang.png" alt="Deskripsi Gambar" class="w-full md:w-auto">
+    </div>
+    <!-- Kolom Teks -->
+    <div class="content-wrapper w-full lg:w-1/2">
+        <h2 class="text-[#D95639] font-bold text-3xl text-center mb-4">Tentang GISHA</h2>
+        <p class="text-justify leading-relaxed">
+            Kabupaten Bantul menawarkan wisata pantai yang memunculkan hiburan karaoke, penginapan, panti pijat 
+            yang berpotensi tingginya aktivitas seksual. Praktik prostitusi di Kabupaten 
+            Bantul sudah ada sejak lama, seperti di daerah Jalan Parangkusumo yang berada dekat dari kawasan 
+            wisata Pantai Parangtritis. Kegiatan wisata akan memunculkan mobilitas dalam jangka pendek yang 
+            berdampak pada tingginya risiko penularan pada pekerja seks komersil untuk berhubungan seks dengan 
+            pasangan yang asal-usulnya beragam. 
+        </p>
+        <p class="text-justify mt-4 leading-relaxed">
+            HIV/AIDS merupakan virus yang menyerang sistem kekebalan tubuh, dimana menurut WHO penularan utamanya 
+            melalui kontak seksual saat adanya cairan tubuh terinfeksi dari darah, air mani, cairan vagina, maupun
+            cairan rektum. Oleh karena itu GISHA hadir memberikan informasi HIV/AIDS berdasarkan faktor fisik aspek 
+            seksual dari hasil analisis spasial sebaran kasus dan kerentanan wilayah berdasarkan kecenderungan jumlah 
+            tuna susila, penduduk pria usia produktif, penduduk miskin dan dengan lokasi rawan tuna susila. 
+        </p>
+    </div>
+</div>
 
-            <h2 class="text-[#D95639] font-bold text-3xl text-center lg:mt-0 mt-4 mb-2">Tentang GISHA</h2>
-            <p class="text-justify mt-4 leading-relaxed">
-                Kabupaten Bantul menawarkan destinasi wisata pantai yang dapat memunculkan perkembangan wisata 
-                seks seperti tempat hiburan, karaoke, panti pijat, dan lainnya. Praktik prostitusi di Kabupaten 
-                Bantul sudah ada sejak lama, seperti di daerah Jalan Parangkusumo yang berada dekat dari kawasan 
-                wisata Pantai Parangtritis. Kegiatan wisata akan memunculkan mobilitas dalam jangka pendek yang 
-                berdampak pada tingginya risiko penularan pada pekerja seks komersil untuk berhubungan seks dengan 
-                pasangan yang asal-usulnya beragam. 
-            </p>
-            <p class="text-justify mt-4 leading-relaxed">
-                HIV/AIDS merupakan virus yang menyerang sistem kekebalan tubuh, dimana menurut WHO penularan utamanya 
-                melalui kontak seksual saat adanya cairan tubuh terinfeksi dari darah, air mani, cairan vagina, maupun
-                cairan rektum. Oleh karena itu GISHA hadir memberikan informasi HIV/AIDS berdasarkan faktor risiko dari 
-                aktivitas seksual. Informasi yang diberikan adalah hasil analisis spasial sebaran kasus dan kerentanan
-                wilayah berdasarkan kecenderungan jumlah tuna susila, penduduk pria usia produktif dan penduduk miskin
-                dengan kelas tinggi yang terdapat lokasi rawan tuna susila di daerah itu. 
-            </p>
-        </div>
+
+<div class="flex flex-col lg:flex-row items-center bg-[#F0F0F0] py-10 px-6 md:px-12 lg:px-20 gap-10">
+    <!-- Kolom Kiri (Bagian Teks) -->
+    <div class="flex flex-col w-full max-w-screen-lg items-center py-5 px-8 md:px-16 lg:px-20 mx-auto">
+        <h2 class="text-[#D95639] font-bold text-3xl text-center lg:mt-0 mt-4 mb-2">Fitur GISHA</h2>
+        <p class="text-justify mt-4 leading-relaxed">
+            GISHA adalah sistem informasi kesehatan HIV/AIDS yang menyajikan fitur utama Peta, Grafik, Edukasi, 
+            dan ada section metadata untuk unduh peta yang menjadi konten webgis. GISHA bermanfaat dalam mendukung 
+            pemerintah dalam upaya pencegahan dan pengendalian kasus HIV/AIDS dengan mengurangi proses transmisi HIV/AIDS 
+            melalui kontak seksual demi penyelamatan generasi muda dan memberikan harapan masa depan yang lebih baik.
+        </p>
     </div>
 
-    <div class="flex flex-col lg:flex-row items-center bg-[#F0F0F0] py-10 px-6 md:px-12 lg:px-20 gap-10 border-4 border-blue-300">
-        <!-- Kolom Kiri (Bagian Teks) -->
-        <div class="flex flex-col w-full lg:w-1/2 items-center py-5 px-8 md:px-16 lg:px-20 mx-auto">
-            <h2 class="text-[#D95639] font-bold text-3xl text-center lg:mt-0 mt-4 mb-2">Fitur GISHA</h2>
-            <p class="text-justify mt-4 leading-relaxed">
-                WebGIS GISHA merupakan sistem informasi kesehatan HIV/AIDS di Kabupaten Bantul. GISHA menyajikan fitur 
-                utama Peta, Grafik Statistik, dan Edukasi Publik. Selain itu juga ada section metadata yang berada di 
-                halaman beranda untuk unduh peta yang menjadi konten webgis. GISHA bermanfaat dalam mendukung pemerintah 
-                dalam upaya pencegahan dan pengendalian kasus HIV/AIDS. Melalui GISHA dapat bermanfaat memberikan kesadaran 
-                masyarakat, khususnya remaja, agar menghindari pergaulan bebas yang menjerumus aktivitas seksual tidak aman 
-                yang berisiko tinggi akan penularan HIV/AIDS. Kedepannya diharapkan dapat mengurangi proses transmisi HIV/AIDS 
-                melalui kontak seksual demi penyelamatan generasi muda dan memberikan harapan masa depan yang lebih baik.
-            </p>
-            <!--<p class="text-justify mt-4 leading-relaxed">
-                Faktor risiko utama HIV/AIDS adalah dari kegiatan seksual baik dari perempuan maupun laki-laki. Perilaku seks bebas berkaitan 
-                dengan prostitusi yang menjadi permasalahan yang tumbuh di ruang perkotaan. Praktik prostitusi di Kabupaten Bantul sudah ada sejak 
-                lama, seperti di daerah Jalan Parangkusumo yang berada dekat dari kawasan wisata Pantai Parangtritis. Oleh karena itu, GISHA hadir 
-                untuk memberikan informasi terkait HIV/AIDS kepada masyarakat untuk menghindari perilaku seks bebas untuk menyelamatkan generasi muda 
-                di masa depan dari terjangkitnya virus HIV/AIDS yang mematikan.
-            </p>-->
-        </div>
-        
-    
         <!-- Kolom Kanan (Bagian Gambar) -->
-        <div class="flex flex-col w-full max-w-screen-lg items-center py-5 px-8 md:px-16 lg:px-20 mx-auto">
+        <div class="flex flex-col w-full max-w-screen-lg items-center py-2 px-8 md:px-16 lg:px-10 mx-auto">
             <div id="card-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <!-- Kartu akan dirender oleh JavaScript -->
             </div>
@@ -176,7 +185,7 @@
                         fill="#D95639" />
                 </svg>`,
                     title: "Peta Data Kesehatan",
-                    description: "Lihat informasi spasial peta tingkat sebaran dan kerentanan HIV/AIDS dari data kasus dan parameter penularannya",
+                    description: "Lihat peta sebaran dan kerentanan HIV/AIDS dari data kasus dan parameter penularannya",
                     link: "/peta",
                     color: "#c94c4c",
                     border: "#bc4040",
@@ -192,7 +201,7 @@
                             fill="#D95639" />
                     </svg>`,
                     title: "Grafik Statistik",
-                    description: "Dapatkan informasi statistik kasus HIV/AIDS dan parameter yang menjadi faktor kerentanannya dengan visualisasi grafik",
+                    description: "Dapatkan informasi kasus HIV/AIDS dan faktor kerentanannya dalam visualisasi grafik statistik",
                     link: "/grafik",
                     color: "#c94c4c",
                     border: "#bc4040",
@@ -211,7 +220,7 @@
                             stroke="#D95639" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>`,
                     title: "Edukasi Kesehatan",
-                    description: "Temukan informasi penting mengenai HIV/AIDS untuk pencegahan dan pengobatan HIV/AIDS dari sumber aktual",
+                    description: "Temukan informasi HIV/AIDS untuk pencegahan dan pengobatan HIV/AIDS dari sumber aktual",
                     link: "/artikel",
                     color: "#c94c4c",
                     border: "#bc4040",
@@ -225,7 +234,7 @@
                 const cardElement = document.createElement('a');
                 cardElement.href = card.link;
                 cardElement.setAttribute('aria-label', card.title);
-                cardElement.className = "py-4 px-5 rounded-xl flex flex-col justify-between";
+                cardElement.className = "py-2 px-3 rounded-xl flex flex-col justify-between";
                 cardElement.style.backgroundColor = "#f8f2f2";
                 cardElement.style.border = `3px solid ${card.border}`;
         
