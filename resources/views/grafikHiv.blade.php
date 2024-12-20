@@ -272,7 +272,7 @@
             renderFilter(selectedData)
         })
         kepadatanIspaParam.addEventListener('click', function() {
-            title.innerHTML = 'Kepadatan Penduduk ISPA'
+            title.innerHTML = 'Jumlah Penduduk'
             kasusHivParam.classList.remove('font-bold')
             /*hotspotHivParam.classList.remove('font-bold')*/
             tunaSusilaParam.classList.remove('font-bold')

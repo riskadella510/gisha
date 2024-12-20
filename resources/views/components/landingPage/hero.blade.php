@@ -130,7 +130,7 @@
 <div class="flex flex-col lg:flex-row items-center content-container">
     <!-- Kolom Gambar -->
     <div class="image-wrapper flex justify-center w-full lg:w-1/2">
-        <img src="./assets/images/hivtentang.png" alt="Deskripsi Gambar" class="w-full md:w-auto">
+        <img src="{{ asset('assets/images/hivtentang.png') }}" alt="Deskripsi Gambar" class="w-full md:w-auto">
     </div>
     <!-- Kolom Teks -->
     <div class="content-wrapper w-full lg:w-1/2">

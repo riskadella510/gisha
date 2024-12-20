@@ -25,7 +25,7 @@
                 Metadata GISHA
             </h2>
             <p class="text-center  mb-2">
-                Informasi HIV/AIDS dalam bentuk visualisasi peta cetak
+                Informasi HIV/AIDS dalam Bentuk Visualisasi Peta Cetak
             </p>
             
         </div>
@@ -130,7 +130,7 @@
             Panduan GISHA
         </h2>
         <p class="text-center  mb-2">
-            Informasi HIV/AIDS dalam bentuk visualisasi peta cetak
+            Berikut Video Panduan Penggunaan GISHA
         </p>
         <div class="flex justify-center items-center mt-5">
                 <iframe width="800" height="450"
